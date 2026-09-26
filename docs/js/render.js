@@ -1810,7 +1810,7 @@ function renderSubgroupList(container, cat) {
           <span class="text-xs font-semibold px-2 py-0.5 rounded bg-zinc-800 text-zinc-300 flex-shrink-0">${cat.badge}</span>
           <h2 class="text-xl sm:text-2xl md:text-3xl font-extrabold text-white tracking-tight flex items-center gap-2 flex-shrink-0">
             <span>${cat.emoji || ''}</span>
-            <span>${cat.name} 목록 (${cat.groups.length}개)</span>
+            <span>${cat.name} 목록</span>
           </h2>
           ${subscriberBadgesHtml}
         </div>
