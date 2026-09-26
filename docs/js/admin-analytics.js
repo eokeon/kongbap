@@ -979,7 +979,7 @@ function openAnalyticsDashboard() {
     selectAdminPage('analytics');
     return;
   }
-  window.open('./analytics.html', '_blank');
+  window.open('./analytics.html', '_blank', 'noopener,noreferrer');
 }
 
 window.openAnalyticsDashboard = openAnalyticsDashboard;

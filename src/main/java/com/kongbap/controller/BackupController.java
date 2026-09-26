@@ -471,7 +471,24 @@ public class BackupController {
             Files.writeString(backupPath, payload, StandardCharsets.UTF_8);
             Files.writeString(latestPath, payload, StandardCharsets.UTF_8);
 
-            // static 및 docs, build 폴더의 streamers.json 및 암호화 streamers.dat 자동 동기화
+            // MariaDB 조직 구조 및 스트리머 데이터 동시 영구 반영 (백업 데이터와 DB의 완전 일치 보장)
+            try {
+                JsonNode root = objectMapper.readTree(payload);
+                JsonNode categoriesNode = root.has("categories") ? root.get("categories") : (root.isArray() ? root : null);
+                if (categoriesNode != null && categoriesNode.isArray()) {
+                    String cleanStructureJson = extractCleanCategoryStructure(categoriesNode);
+                    saveCategoriesToDb(cleanStructureJson);
+
+                    List<StreamerDto> streamerDtoList = extractStreamersFromCategoriesNode(categoriesNode);
+                    if (!streamerDtoList.isEmpty()) {
+                        streamerService.syncStreamers(streamerDtoList);
+                    }
+                }
+            } catch (Exception e) {
+                log.warn("백업 페이로드 MariaDB 동기화 중 경고: {}", e.getMessage());
+            }
+
+            // static 및 docs, build 폴더의 streamers.json 자동 동기화
             syncStreamersFiles(payload);
 
             cleanOldBackups(dir);
@@ -649,7 +666,9 @@ public class BackupController {
                 if (Files.exists(p.getParent())) {
                     Files.writeString(p, jsonContent, StandardCharsets.UTF_8);
                 }
-            } catch (Exception ignored) {}
+            } catch (Exception e) {
+                log.warn("streamers.json 동기화 중 오류 (경로: {}): {}", p, e.getMessage());
+            }
         }
     }
 

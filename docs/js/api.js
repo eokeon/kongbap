@@ -485,37 +485,9 @@ async function fetchStreamersFromDb() {
   }
 
   // 1. 만약 DB에서 가져온 데이터가 있는 경우:
+  // MariaDB가 정상이면 MariaDB의 데이터가 최신 원본(Source of Truth)입니다.
+  // 정적 파일(streamers.json)로 DB의 신규/수정 인원을 덮어쓰거나 롤백하지 않고 그대로 반환합니다.
   if (Array.isArray(dbList) && dbList.length > 0) {
-    if (staticData && Array.isArray(staticData.categories) && staticData.categories.length > 0) {
-      const rawStaticList = extractAllStreamersFromStatic(staticData);
-      const dbIdSet = new Set(dbList.map(s => s.id));
-      const staticIdSet = new Set(rawStaticList.map(s => s.id));
-      const missingFromDb = rawStaticList.filter(s => !dbIdSet.has(s.id));
-      const obsoleteInDb = dbList.filter(s => !staticIdSet.has(s.id));
-
-      // 겸직 소속 불일치 여부 검사 (예: DB의 씨랙이나 금휘에 갱단 소속이 누락된 경우)
-      const hasAffiliationMismatch = rawStaticList.some(s => {
-        const dbMember = dbList.find(d => d.id === s.id);
-        if (!dbMember) return true;
-        const sAffCount = Array.isArray(s.affiliations) ? s.affiliations.length : 0;
-        let dAffCount = 0;
-        if (Array.isArray(dbMember.affiliations)) {
-          dAffCount = dbMember.affiliations.length;
-        } else if (typeof dbMember.affiliations === "string" && dbMember.affiliations.trim().startsWith("[")) {
-          try { dAffCount = JSON.parse(dbMember.affiliations).length; } catch (e) {}
-        }
-        return sAffCount !== dAffCount;
-      });
-
-      if (missingFromDb.length > 0 || obsoleteInDb.length > 0 || hasAffiliationMismatch || dbList.length !== staticIdSet.size) {
-        console.log(`[DB 최신화 동기화] DB 상태(인원: ${dbList.length}명, 누락: ${missingFromDb.length}, 구버전초과: ${obsoleteInDb.length})를 정적 최신 기준(${staticIdSet.size}명)과 즉시 동기화합니다.`);
-        const mergedList = mergeStaticStreamersWithLocalVideos(rawStaticList);
-        applyStreamersToKongbapData(mergedList);
-        persistData(true);
-        syncAllStreamersToDb(mergedList);
-        return "STATIC_CATEGORIES_LOADED";
-      }
-    }
     return dbList;
   }
 

@@ -483,8 +483,8 @@ function renderCategoryTabs() {
     const isActive = state.currentCategory === cat.id && !state.searchQuery;
     const theme = COLOR_THEMES[cat.color] || COLOR_THEMES.blue;
     const activeClass = isActive 
-      ? theme.activeTab 
-      : "bg-zinc-900/80 text-zinc-400 hover:text-white hover:bg-zinc-800/80 border border-zinc-800";
+      ? `${theme.activeTab} border-transparent` 
+      : "bg-zinc-900/80 text-zinc-400 hover:text-white hover:bg-zinc-800/80 border-zinc-800";
 
     const memberCount = getCategoryMembers(cat).length;
     let countLabel = `${memberCount}명`;
@@ -496,84 +496,197 @@ function renderCategoryTabs() {
     }
 
     return `
-      <button onclick="selectCategory('${cat.id}')" class="flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 md:px-3.5 py-1.5 sm:py-2 rounded-xl font-semibold text-xs sm:text-sm transition-all duration-200 cursor-pointer whitespace-nowrap flex-shrink-0 ${activeClass}">
-        <span>${cat.emoji || ''}</span>
-        <span>${cat.name}</span>
-        <span class="text-[11px] sm:text-xs px-1.5 sm:px-2 py-0.5 rounded-full ${isActive ? 'bg-black/30 text-white font-bold' : 'bg-zinc-800 text-zinc-400'}">
+      <button 
+        type="button"
+        data-cat-id="${cat.id}"
+        onclick="selectCategory('${cat.id}')" 
+        class="flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 md:px-3.5 py-1.5 sm:py-2 rounded-xl font-bold text-xs sm:text-sm border transition-colors duration-150 cursor-pointer whitespace-nowrap flex-shrink-0 select-none ${activeClass}"
+      >
+        <span class="leading-none">${cat.emoji || ''}</span>
+        <span class="leading-none">${cat.name}</span>
+        <span class="category-count-badge text-[11px] sm:text-xs px-1.5 sm:px-2 py-0.5 rounded-full font-bold transition-colors duration-150 leading-none ${isActive ? 'bg-black/30 text-white' : 'bg-zinc-800 text-zinc-400'}">
           ${countLabel}
         </span>
       </button>
     `;
   }
 
+  function updateCategoryTabContainer(container, categories) {
+    if (!container) return;
+    const existingButtons = container.querySelectorAll("button[data-cat-id]");
+    if (existingButtons.length === categories.length) {
+      existingButtons.forEach(btn => {
+        const catId = btn.getAttribute("data-cat-id");
+        const cat = categories.find(c => c.id === catId);
+        if (!cat) return;
+        const isActive = state.currentCategory === cat.id && !state.searchQuery;
+        const theme = COLOR_THEMES[cat.color] || COLOR_THEMES.blue;
+        const activeClass = isActive 
+          ? `${theme.activeTab} border-transparent` 
+          : "bg-zinc-900/80 text-zinc-400 hover:text-white hover:bg-zinc-800/80 border-zinc-800";
+        btn.className = `flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 md:px-3.5 py-1.5 sm:py-2 rounded-xl font-bold text-xs sm:text-sm border transition-colors duration-150 cursor-pointer whitespace-nowrap flex-shrink-0 select-none ${activeClass}`;
+        const badge = btn.querySelector(".category-count-badge");
+        if (badge) {
+          const memberCount = getCategoryMembers(cat).length;
+          let countLabel = `${memberCount}명`;
+          if (cat.id === "loveline") {
+            const couples = typeof getLovelineList === "function" ? getLovelineList() : [];
+            countLabel = `${couples.length}커플`;
+          } else if (cat.id === "guide") {
+            countLabel = `${memberCount}개`;
+          }
+          badge.textContent = countLabel;
+          badge.className = `category-count-badge text-[11px] sm:text-xs px-1.5 sm:px-2 py-0.5 rounded-full font-bold transition-colors duration-150 leading-none ${isActive ? 'bg-black/30 text-white' : 'bg-zinc-800 text-zinc-400'}`;
+        }
+      });
+      return;
+    }
+    container.innerHTML = categories.map(renderCategoryBtn).join("");
+  }
+
+  const isStatsActive = (state.currentCategory === "stats" || state.currentCategory === "leaderboard") && !state.searchQuery;
+  const allMembers = typeof getAllMembersWithLeaderboardStats === "function" ? getAllMembersWithLeaderboardStats() : [];
+  const totalMembersCount = allMembers.length || 0;
+
   if (secondaryContainer) {
-    tabContainer.innerHTML = jobCategories.map(renderCategoryBtn).join("");
-    secondaryContainer.innerHTML = subCategories.map(renderCategoryBtn).join("");
+    updateCategoryTabContainer(tabContainer, jobCategories);
+    updateCategoryTabContainer(secondaryContainer, subCategories);
   } else {
-    tabContainer.innerHTML = KONGBAP_DATA.categories.map(renderCategoryBtn).join("");
+    updateCategoryTabContainer(tabContainer, KONGBAP_DATA.categories);
+  }
+
+  // 우측 상단 종합 통계 카드 버튼 (원래의 큰 버튼 UI 유지)
+  const headerStatsEl = document.getElementById("header-stats");
+  if (headerStatsEl) {
+    headerStatsEl.onclick = () => selectCategory('stats');
+    if (typeof updateHeaderStats === "function") {
+      updateHeaderStats();
+    }
   }
 
   const floatingContainer = document.getElementById("floating-category-tabs");
   if (floatingContainer) {
-    function renderFloatingCatBtn(cat) {
-      const isActive = state.currentCategory === cat.id && !state.searchQuery;
-      const theme = COLOR_THEMES[cat.color] || COLOR_THEMES.blue;
-      const activeClass = isActive 
-        ? `${theme.activeTab} ring-1 ring-white/25 shadow-lg font-bold` 
-        : "bg-zinc-900/90 text-zinc-400 hover:text-white hover:bg-zinc-800/90 border border-zinc-800/80 hover:border-zinc-700";
-
-      const memberCount = getCategoryMembers(cat).length;
-      let countLabel = `${memberCount}명`;
-      if (cat.id === "loveline") {
-        const couples = typeof getLovelineList === "function" ? getLovelineList() : [];
-        countLabel = `${couples.length}커플`;
-      } else if (cat.id === "guide") {
-        countLabel = `${memberCount}개`;
+    const existingFloatingBtns = floatingContainer.querySelectorAll("button[data-floating-cat-id]");
+    if (existingFloatingBtns.length > 0) {
+      // In-place DOM 갱신: 요소 재생성 없이 클래스 및 뱃지만 신속 업데이트 (레이아웃 밀림 및 재렌더링 방지)
+      const statsBtn = document.getElementById("floating-stats-btn");
+      if (statsBtn) {
+        statsBtn.className = `group flex items-center justify-between gap-2.5 sm:gap-3 px-2.5 sm:px-3.5 py-2 sm:py-2.5 rounded-xl sm:rounded-2xl font-bold text-xs sm:text-sm border transition-all duration-200 cursor-pointer select-none ${isStatsActive ? 'bg-amber-950/85 text-amber-300 border-amber-500/70 shadow-lg shadow-amber-950/40 ring-1 ring-amber-400/30 font-bold' : 'bg-gradient-to-r from-amber-500/15 to-amber-600/10 hover:from-amber-500/25 hover:to-amber-600/20 text-amber-300 hover:text-amber-200 border-amber-500/40 hover:border-amber-400/80 shadow-md shadow-amber-950/30'}`;
+        const badge = statsBtn.querySelector(".floating-nav-badge");
+        if (badge) {
+          badge.className = `floating-nav-badge text-[10px] sm:text-xs px-2 py-0.5 rounded-full flex-shrink-0 font-extrabold ${isStatsActive ? 'bg-amber-500/25 text-amber-200 border border-amber-500/40' : 'bg-amber-500/25 text-amber-300 border border-amber-500/40 group-hover:bg-amber-500/35'}`;
+        }
       }
 
-      return `
+      existingFloatingBtns.forEach(btn => {
+        const catId = btn.getAttribute("data-floating-cat-id");
+        const cat = KONGBAP_DATA.categories.find(c => c.id === catId);
+        if (!cat) return;
+        const isActive = state.currentCategory === cat.id && !state.searchQuery;
+        const theme = COLOR_THEMES[cat.color] || COLOR_THEMES.blue;
+        const activeClass = isActive 
+          ? `${theme.activeTab} ring-1 ring-white/25 shadow-lg font-bold border-transparent` 
+          : "bg-zinc-900/90 text-zinc-400 hover:text-white hover:bg-zinc-800/90 border-zinc-800/80 hover:border-zinc-700";
+        btn.className = `group flex items-center justify-between gap-2.5 sm:gap-3 px-2.5 sm:px-3.5 py-2 sm:py-2.5 rounded-xl sm:rounded-2xl font-bold text-xs sm:text-sm border transition-all duration-200 cursor-pointer select-none ${activeClass}`;
+
+        const badge = btn.querySelector(".floating-nav-badge");
+        if (badge) {
+          const memberCount = getCategoryMembers(cat).length;
+          let countLabel = `${memberCount}명`;
+          if (cat.id === "loveline") {
+            const couples = typeof getLovelineList === "function" ? getLovelineList() : [];
+            countLabel = `${couples.length}커플`;
+          } else if (cat.id === "guide") {
+            countLabel = `${memberCount}개`;
+          }
+          const labelSpan = badge.querySelector(".floating-nav-label");
+          const shortSpan = badge.querySelector(".floating-nav-short");
+          if (labelSpan) labelSpan.textContent = countLabel;
+          if (shortSpan) shortSpan.textContent = String(memberCount);
+          badge.className = `floating-nav-badge text-[10px] sm:text-xs px-2 py-0.5 rounded-full flex-shrink-0 font-extrabold ${isActive ? 'bg-black/40 text-white' : 'bg-zinc-800 text-zinc-400 group-hover:text-zinc-200'}`;
+        }
+      });
+    } else {
+      function renderFloatingCatBtn(cat) {
+        const isActive = state.currentCategory === cat.id && !state.searchQuery;
+        const theme = COLOR_THEMES[cat.color] || COLOR_THEMES.blue;
+        const activeClass = isActive 
+          ? `${theme.activeTab} ring-1 ring-white/25 shadow-lg font-bold border-transparent` 
+          : "bg-zinc-900/90 text-zinc-400 hover:text-white hover:bg-zinc-800/90 border-zinc-800/80 hover:border-zinc-700";
+
+        const memberCount = getCategoryMembers(cat).length;
+        let countLabel = `${memberCount}명`;
+        if (cat.id === "loveline") {
+          const couples = typeof getLovelineList === "function" ? getLovelineList() : [];
+          countLabel = `${couples.length}커플`;
+        } else if (cat.id === "guide") {
+          countLabel = `${memberCount}개`;
+        }
+
+        return `
+          <button 
+            data-floating-cat-id="${cat.id}"
+            onclick="selectCategory('${cat.id}')" 
+            title="${cat.name} (${countLabel})"
+            class="group flex items-center justify-between gap-2.5 sm:gap-3 px-2.5 sm:px-3.5 py-2 sm:py-2.5 rounded-xl sm:rounded-2xl font-bold text-xs sm:text-sm border transition-all duration-200 cursor-pointer select-none ${activeClass}"
+          >
+            <div class="flex items-center gap-2 sm:gap-2.5 min-w-0">
+              <span class="text-base sm:text-lg flex-shrink-0 leading-none">${cat.emoji || ''}</span>
+              <span class="floating-nav-label hidden sm:inline whitespace-nowrap font-bold text-xs sm:text-sm">${cat.name}</span>
+            </div>
+            <span class="floating-nav-badge text-[10px] sm:text-xs px-2 py-0.5 rounded-full flex-shrink-0 font-extrabold ${isActive ? 'bg-black/40 text-white' : 'bg-zinc-800 text-zinc-400 group-hover:text-zinc-200'}">
+              <span class="floating-nav-label hidden sm:inline">${countLabel}</span>
+              <span class="floating-nav-short sm:hidden">${memberCount}</span>
+            </span>
+          </button>
+        `;
+      }
+
+      // 1) 맨 위로 이동 (제일 위에 배치)
+      const scrollTopBtnHtml = `
         <button 
-          onclick="selectCategory('${cat.id}')" 
-          title="${cat.name} (${countLabel})"
-          class="group flex items-center justify-between gap-2.5 sm:gap-3 px-2.5 sm:px-3.5 py-2 sm:py-2.5 rounded-xl sm:rounded-2xl font-bold text-xs sm:text-sm transition-all duration-200 cursor-pointer select-none ${activeClass}"
+          onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" 
+          title="페이지 최상단으로 이동" 
+          class="group flex items-center justify-between gap-2.5 sm:gap-3 px-2.5 sm:px-3.5 py-2 sm:py-2.5 rounded-xl sm:rounded-2xl font-bold text-xs sm:text-sm text-zinc-400 hover:text-white hover:bg-zinc-800/90 transition-all cursor-pointer select-none border border-transparent hover:border-zinc-700"
         >
           <div class="flex items-center gap-2 sm:gap-2.5 min-w-0">
-            <span class="text-base sm:text-lg flex-shrink-0 leading-none">${cat.emoji || ''}</span>
-            <span class="floating-nav-label hidden sm:inline whitespace-nowrap font-bold text-xs sm:text-sm">${cat.name}</span>
+            <span class="text-base sm:text-lg flex-shrink-0 leading-none font-black text-center w-5 sm:w-auto">↑</span>
+            <span class="floating-nav-label hidden sm:inline whitespace-nowrap font-bold text-xs sm:text-sm">맨 위로 이동</span>
           </div>
-          <span class="floating-nav-badge text-[10px] sm:text-xs px-2 py-0.5 rounded-full flex-shrink-0 font-extrabold ${isActive ? 'bg-black/40 text-white' : 'bg-zinc-800 text-zinc-400 group-hover:text-zinc-200'}">
-            <span class="floating-nav-label hidden sm:inline">${countLabel}</span>
-            <span class="floating-nav-short sm:hidden">${memberCount}</span>
+          <span class="floating-nav-badge text-[10px] sm:text-xs px-2 py-0.5 rounded-full flex-shrink-0 font-extrabold bg-zinc-800 text-zinc-400 group-hover:text-zinc-200">
+            <span class="floating-nav-label hidden sm:inline">TOP</span>
+            <span class="floating-nav-short sm:hidden">↑</span>
           </span>
         </button>
+        <div class="pt-1 my-0.5 border-t border-zinc-800/80"></div>
       `;
+
+      // 2) 종합 통계 (맨 위로 이동 다음 배치)
+      const statsFloatingBtnHtml = `
+        <button 
+          id="floating-stats-btn"
+          onclick="selectCategory('stats')" 
+          title="명예의 전당 & 종합 통계 보기"
+          class="group flex items-center justify-between gap-2.5 sm:gap-3 px-2.5 sm:px-3.5 py-2 sm:py-2.5 rounded-xl sm:rounded-2xl font-bold text-xs sm:text-sm border transition-all duration-200 cursor-pointer select-none ${isStatsActive ? 'bg-amber-950/85 text-amber-300 border-amber-500/70 shadow-lg shadow-amber-950/40 ring-1 ring-amber-400/30 font-bold' : 'bg-gradient-to-r from-amber-500/15 to-amber-600/10 hover:from-amber-500/25 hover:to-amber-600/20 text-amber-300 hover:text-amber-200 border-amber-500/40 hover:border-amber-400/80 shadow-md shadow-amber-950/30'}"
+        >
+          <div class="flex items-center gap-2 sm:gap-2.5 min-w-0">
+            <span class="text-base sm:text-lg flex-shrink-0 leading-none">📊</span>
+            <span class="floating-nav-label hidden sm:inline whitespace-nowrap font-bold text-xs sm:text-sm">종합 통계</span>
+          </div>
+          <span class="floating-nav-badge text-[10px] sm:text-xs px-2 py-0.5 rounded-full flex-shrink-0 font-extrabold ${isStatsActive ? 'bg-amber-500/25 text-amber-200 border border-amber-500/40' : 'bg-amber-500/25 text-amber-300 border border-amber-500/40 group-hover:bg-amber-500/35'}">
+            <span class="floating-nav-label hidden sm:inline">랭킹</span>
+            <span class="floating-nav-short sm:hidden">★</span>
+          </span>
+        </button>
+        <div class="pt-1 my-0.5 border-t border-zinc-800/80"></div>
+      `;
+
+      // 3) 직업탭 순서대로 (줄 없이 연달아 배치)
+      const jobHtml = jobCategories.map(renderFloatingCatBtn).join("");
+      const subHtml = subCategories.map(renderFloatingCatBtn).join("");
+
+      floatingContainer.innerHTML = scrollTopBtnHtml + statsFloatingBtnHtml + jobHtml + subHtml;
     }
-
-    const jobHtml = jobCategories.map(renderFloatingCatBtn).join("");
-    const subHtml = subCategories.length > 0 ? `
-      <div class="pt-1 my-0.5 border-t border-zinc-800/80"></div>
-      ${subCategories.map(renderFloatingCatBtn).join("")}
-    ` : "";
-
-    const statsBtnHtml = `
-      <div class="pt-1 my-0.5 border-t border-zinc-800/80"></div>
-      <button 
-        onclick="openLeaderboardModal()" 
-        title="명예의 전당 & 종합 통계 보기"
-        class="group flex items-center justify-between gap-2.5 sm:gap-3 px-2.5 sm:px-3.5 py-2 sm:py-2.5 rounded-xl sm:rounded-2xl font-bold text-xs sm:text-sm transition-all duration-200 cursor-pointer select-none bg-gradient-to-r from-amber-500/15 to-amber-600/10 hover:from-amber-500/25 hover:to-amber-600/20 text-amber-300 hover:text-amber-200 border border-amber-500/40 hover:border-amber-400/80 shadow-md shadow-amber-950/30"
-      >
-        <div class="flex items-center gap-2 sm:gap-2.5 min-w-0">
-          <span class="text-base sm:text-lg flex-shrink-0 leading-none">📊</span>
-          <span class="floating-nav-label hidden sm:inline whitespace-nowrap font-bold text-xs sm:text-sm">종합 통계</span>
-        </div>
-        <span class="floating-nav-badge text-[10px] sm:text-xs px-2 py-0.5 rounded-full flex-shrink-0 font-extrabold bg-amber-500/25 text-amber-300 border border-amber-500/40 group-hover:bg-amber-500/35">
-          <span class="floating-nav-label hidden sm:inline">랭킹</span>
-          <span class="floating-nav-short sm:hidden">★</span>
-        </span>
-      </button>
-    `;
-
-    floatingContainer.innerHTML = jobHtml + subHtml + statsBtnHtml;
   }
 
   updateFloatingCategoryNavVisibility();
@@ -1111,6 +1224,10 @@ function renderContent() {
     return;
   }
 
+  if (state.searchQuery || state.currentMember || (state.currentCategory !== "stats" && state.currentCategory !== "leaderboard")) {
+    if (typeof cleanupLeaderboardListeners === "function") cleanupLeaderboardListeners();
+  }
+
   if (state.searchQuery) {
     renderSearchResults(mainContent);
     if (typeof updatePageTitle === "function") updatePageTitle();
@@ -1119,6 +1236,14 @@ function renderContent() {
 
   if (state.currentMember) {
     renderMemberVideos(mainContent);
+    if (typeof updatePageTitle === "function") updatePageTitle();
+    return;
+  }
+
+  if (state.currentCategory === "stats" || state.currentCategory === "leaderboard") {
+    if (typeof renderLeaderboardPage === "function") {
+      renderLeaderboardPage(mainContent);
+    }
     if (typeof updatePageTitle === "function") updatePageTitle();
     return;
   }
@@ -2237,8 +2362,14 @@ function renderMemberVideos(container) {
   const groupEmoji = group ? (group.emoji || '') : (cat ? (cat.emoji || '') : '');
   const catName = cat ? cat.name : '인원';
   const catId = cat ? cat.id : 'police';
+  const isFromStats = state.navigationSource === "stats" || state.navigationSource === "leaderboard";
   const isFromLoveline = state.navigationSource === "loveline";
-  const backButtonHtml = isFromLoveline ? `
+  const backButtonHtml = isFromStats ? `
+    <button onclick="goBackFromMember('stats')" class="inline-flex items-center gap-1.5 text-xs text-amber-300 hover:text-white bg-zinc-800 hover:bg-zinc-700 border border-amber-500/40 hover:border-amber-500/70 px-3 py-1.5 rounded-lg transition-colors mb-4 cursor-pointer shadow-sm">
+      ${SVG_ICONS.back}
+      <span>종합통계로 돌아가기</span>
+    </button>
+  ` : isFromLoveline ? `
     <button onclick="goBackFromMember('loveline')" class="inline-flex items-center gap-1.5 text-xs text-pink-300 hover:text-white bg-zinc-800 hover:bg-zinc-700 border border-pink-500/40 hover:border-pink-500/70 px-3 py-1.5 rounded-lg transition-colors mb-4 cursor-pointer shadow-sm">
       ${SVG_ICONS.back}
       <span>러브라인으로 돌아가기</span>

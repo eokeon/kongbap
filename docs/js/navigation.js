@@ -367,6 +367,10 @@ function updatePageTitle() {
     document.title = `관리자 센터 | ${baseTitle}`;
     return;
   }
+  if (state.currentCategory === "stats" || state.currentCategory === "leaderboard") {
+    document.title = `종합 통계 | ${baseTitle}`;
+    return;
+  }
   if (state.searchQuery) {
     document.title = `"${state.searchQuery}" 검색 결과 | ${baseTitle}`;
     return;
@@ -452,6 +456,10 @@ function applyNavState(navState, options = {}) {
     state.currentMember = null;
   } else if (targetCatId === "adminpage") {
     state.currentCategory = "adminpage";
+    state.currentGroup = null;
+    state.currentMember = null;
+  } else if (targetCatId === "stats" || targetCatId === "leaderboard") {
+    state.currentCategory = "stats";
     state.currentGroup = null;
     state.currentMember = null;
   } else {
@@ -626,6 +634,10 @@ function restoreNavigationState() {
       } else {
         state.currentCategory = (KONGBAP_DATA.categories[0] && KONGBAP_DATA.categories[0].id) || "police";
       }
+    } else if (targetCat === "stats" || targetCat === "leaderboard") {
+      state.currentCategory = "stats";
+      state.currentGroup = null;
+      state.currentMember = null;
     } else if (targetCat && KONGBAP_DATA.categories.some(c => c.id === targetCat)) {
       state.currentCategory = targetCat;
     } else {
@@ -779,13 +791,17 @@ function goBackFromMember(type, targetId) {
     sessionStorage.removeItem("kongbap_nav_member");
   } catch (e) {}
 
+  const wasFromStats = type === 'stats' || state.navigationSource === 'stats' || state.navigationSource === 'leaderboard';
   const wasFromLoveline = type === 'loveline' || state.navigationSource === 'loveline';
   state.navigationSource = null;
   try {
     sessionStorage.removeItem("kongbap_nav_source");
   } catch (e) {}
 
-  if (wasFromLoveline) {
+  if (wasFromStats) {
+    state.currentCategory = 'stats';
+    state.currentGroup = null;
+  } else if (wasFromLoveline) {
     if (typeof resetLovelineFilter === "function") resetLovelineFilter();
     else if (typeof window.resetLovelineFilter === "function") window.resetLovelineFilter();
     state.currentCategory = 'loveline';
@@ -808,7 +824,11 @@ function goBackFromMember(type, targetId) {
     setTimeout(() => {
       if (isReturningToList) {
         isReturningToList = false;
-        if (wasFromLoveline) {
+        if (wasFromStats) {
+          state.currentCategory = 'stats';
+          state.currentGroup = null;
+          state.currentMember = null;
+        } else if (wasFromLoveline) {
           state.currentCategory = 'loveline';
           state.currentGroup = null;
           state.currentMember = null;
@@ -840,6 +860,18 @@ function selectCategory(catId) {
     if (typeof resetLovelineFilter === "function") resetLovelineFilter();
     else if (typeof window.resetLovelineFilter === "function") window.resetLovelineFilter();
   }
+  if (catId === "stats" || state.currentCategory === "stats") {
+    if (typeof leaderboardSearchQuery !== "undefined") leaderboardSearchQuery = "";
+  }
+  // 다른 직업 탭에서 종합 통계로 진입할 경우 전체시간순('total')으로 초기화 (인원 클릭 후 뒤로가기로 올 때는 유지)
+  if (catId === "stats") {
+    if (state.currentCategory !== "stats" && state.navigationSource !== "stats") {
+      if (typeof currentLeaderboardTab !== "undefined") currentLeaderboardTab = "total";
+    }
+  } else if (state.currentCategory === "stats" || state.currentCategory === "leaderboard") {
+    if (typeof cleanupLeaderboardListeners === "function") cleanupLeaderboardListeners();
+  }
+  closeAllOpenModals();
   state.currentCategory = catId;
   state.currentGroup = null;
   state.currentMember = null;

@@ -1165,7 +1165,7 @@ async function handleSaveMember(e) {
     }
     persistData();
     updateStats();
-    createBackupSnapshot(`인원 수정: ${name} (${streamer}) - 소속 ${selectedAffiliations.length}개`);
+    await createBackupSnapshot(`인원 수정: ${name} (${streamer}) - 소속 ${selectedAffiliations.length}개`);
     showToast(`✓ ${name} (${streamer}) 정보 수정 완료 (${selectedAffiliations.length}개 소속)`);
   } else {
     const newMember = {
@@ -1239,7 +1239,7 @@ async function handleSaveMember(e) {
     }
     persistData();
     updateStats();
-    createBackupSnapshot(`인원 추가: ${name} (${streamer}) - 소속 ${selectedAffiliations.length}개`);
+    await createBackupSnapshot(`인원 추가: ${name} (${streamer}) - 소속 ${selectedAffiliations.length}개`);
     showToast(`✓ 새 인원 '${name} (${streamer})' 등록 완료 (${selectedAffiliations.length}개 소속)`);
   }
 
@@ -1513,7 +1513,7 @@ async function executeRemoveMemberAffiliation(memberId, catId, groupId = null) {
   }
   persistData();
   updateStats();
-  createBackupSnapshot(`소속 제외: ${targetName} - [${tabLabel}] 소속 제외 (잔여 ${remainingAffs.length}개)`);
+  await createBackupSnapshot(`소속 제외: ${targetName} - [${tabLabel}] 소속 제외 (잔여 ${remainingAffs.length}개)`);
   renderContent();
   showToast(`✓ '${targetName}' 인원이 [${tabLabel}] 소속에서 제외되었습니다.`);
 }
@@ -1546,7 +1546,7 @@ async function executeDeleteMember(memberId, password = "") {
 
   persistData();
   updateStats();
-  createBackupSnapshot(`인원 삭제: ${targetName}`);
+  await createBackupSnapshot(`인원 삭제: ${targetName}`);
   renderContent();
   showToast(`🗑️ '${targetName}' 인원이 삭제되었습니다.`);
   return true;

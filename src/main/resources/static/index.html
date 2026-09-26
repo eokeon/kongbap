@@ -133,7 +133,7 @@
       </div>
 
       <!-- 우측: 종합 통계 버튼 (2줄 높이에 맞춰 확장 & 좌우 너비 확대) -->
-      <div id="header-stats" onclick="openLeaderboardModal()" title="전체 종합 통계 보기 (클릭)" class="flex items-center justify-center bg-zinc-900/80 hover:bg-zinc-800/90 px-5 sm:px-6 lg:px-7 lg:min-w-[220px] py-2 sm:py-2.5 rounded-2xl border border-zinc-800 hover:border-amber-500/50 flex-shrink-0 cursor-pointer transition-all shadow-md group select-none w-full lg:w-auto"></div>
+      <div id="header-stats" onclick="selectCategory('stats')" title="전체 종합 통계 보기 (클릭)" class="flex items-center justify-center bg-zinc-900/80 hover:bg-zinc-800/90 px-5 sm:px-6 lg:px-7 lg:min-w-[220px] py-2 sm:py-2.5 rounded-2xl border border-zinc-800 hover:border-amber-500/50 flex-shrink-0 cursor-pointer transition-all shadow-md group select-none w-full lg:w-auto"></div>
     </div>
 
     <section id="main-content" class="animate-fade-in"></section>
@@ -151,16 +151,6 @@
         <span class="text-[10px] text-zinc-500 font-normal">빠른 이동</span>
       </div>
       <div id="floating-category-tabs" class="flex flex-col gap-1.5"></div>
-      <div class="pt-1.5 mt-0.5 border-t border-zinc-800/80">
-        <button 
-          onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" 
-          title="페이지 최상단으로 이동" 
-          class="w-full flex items-center justify-center gap-1.5 py-2 sm:py-2.5 px-3 rounded-xl sm:rounded-2xl text-xs font-bold text-zinc-400 hover:text-white hover:bg-zinc-800/80 transition-all border border-transparent hover:border-zinc-700 cursor-pointer"
-        >
-          <span class="font-black text-sm">↑</span>
-          <span class="floating-nav-label hidden sm:inline">맨 위로 이동</span>
-        </button>
-      </div>
     </div>
   </aside>
 

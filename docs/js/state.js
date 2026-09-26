@@ -126,32 +126,36 @@ window.escapeHtml = escapeHtml;
 
 function sanitizeUrl(url) {
   if (!url || typeof url !== "string") return "";
-  // 1. 비가시 제어문자(ASCII 0-31, 127) 및 공백 제거
-  const cleaned = url.replace(/[\u0000-\u001F\u007F-\u009F\s]/g, "");
+  // 1. 비가시 제어문자(ASCII 0-31, 127) 제거 및 앞뒤 공백 제거
+  const cleaned = url.replace(/[\u0000-\u001F\u007F-\u009F]/g, "").trim();
   const lower = cleaned.toLowerCase();
   
-  // 2. 위험 프로토콜 차단 (javascript:, vbscript:, data:text/html, file:, blob:)
+  // 2. 위험 프로토콜 및 악성 스크립트 실행 벡터 차단
   if (
     lower.startsWith("javascript:") || 
     lower.startsWith("vbscript:") || 
-    lower.startsWith("data:text") || 
     lower.startsWith("file:") ||
     lower.startsWith("blob:") ||
-    lower.includes("javascript:")
+    lower.includes("javascript:") ||
+    lower.includes("vbscript:") ||
+    (lower.startsWith("data:") && !lower.startsWith("data:image/")) ||
+    (lower.startsWith("data:image/") && (lower.includes("svg") || lower.includes("xml") || lower.includes("<script")))
   ) {
     return "#";
   }
   
-  // 3. 안전한 프로토콜 및 상대경로만 허용
+  // 3. 안전한 프로토콜, 상대경로, 인페이지 앵커(#)만 허용
   if (
     lower.startsWith("http://") || 
     lower.startsWith("https://") || 
     lower.startsWith("./") || 
     lower.startsWith("/") || 
+    lower.startsWith("#") || 
     lower.startsWith("assets/") || 
     lower.startsWith("data:image/")
   ) {
-    return url.trim();
+    // 4. HTML 속성 이탈(Attribute Injection/Breakout) 방지용 이스케이프
+    return escapeHtml(cleaned);
   }
   return "#";
 }
@@ -678,7 +682,14 @@ function showToast(msg) {
     toast.className = "fixed bottom-6 right-6 z-50 bg-zinc-900 border border-zinc-700 text-white text-xs font-semibold px-4 py-3 rounded-2xl shadow-2xl transition-all duration-300 opacity-0 translate-y-4 pointer-events-none flex items-center gap-2";
     document.body.appendChild(toast);
   }
-  toast.innerHTML = msg;
+  // XSS 방어: 스크립트 태그 및 위험 이벤트 핸들러 제거
+  const safeMsg = typeof msg === "string"
+    ? msg.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, "")
+         .replace(/\bon\w+\s*=/gi, "data-disabled=")
+         .replace(/javascript:/gi, "")
+    : escapeHtml(String(msg));
+
+  toast.innerHTML = safeMsg;
   toast.classList.remove("opacity-0", "translate-y-4", "pointer-events-none");
   toast.classList.add("opacity-100", "translate-y-0");
 
@@ -769,8 +780,44 @@ function updateStats() {
   const totalMembers = uniqueMembers.size;
   const formattedHeaderViews = typeof formatViewCount === "function" ? (formatViewCount(totalViews) || "0회") : `${totalViews.toLocaleString()}회`;
 
+  updateHeaderStats();
+}
+
+function updateHeaderStats() {
   const statEl = document.getElementById("header-stats");
-  if (statEl) {
+  if (!statEl) return;
+
+  const allMembers = typeof getAllMembersWithLeaderboardStats === "function" ? getAllMembersWithLeaderboardStats() : [];
+  const globalStats = typeof computeGlobalMetrics === "function" ? computeGlobalMetrics(allMembers) : null;
+  const totalMembers = globalStats ? globalStats.totalMembers : (allMembers.length || (typeof KONGBAP_DATA !== "undefined" ? KONGBAP_DATA.categories.reduce((acc, c) => acc + (getCategoryMembers(c) || []).length, 0) : 0));
+  const totalVideos = globalStats ? globalStats.totalVideos : 0;
+
+  const isStatsActive = (state.currentCategory === "stats" || state.currentCategory === "leaderboard") && !state.searchQuery;
+
+  statEl.onclick = () => {
+    if (typeof selectCategory === "function") selectCategory('stats');
+  };
+
+  if (isStatsActive) {
+    statEl.className = "flex items-center justify-center bg-amber-950/80 hover:bg-amber-900/70 px-5 sm:px-6 lg:px-7 lg:min-w-[220px] py-2 sm:py-2.5 rounded-2xl border border-amber-500/70 shadow-lg shadow-amber-950/40 ring-1 ring-amber-400/20 text-white flex-shrink-0 cursor-pointer transition-all group select-none w-full lg:w-auto";
+    statEl.innerHTML = `
+      <div class="flex items-center justify-between gap-4 sm:gap-6 w-full">
+        <div class="flex flex-col justify-center items-center sm:items-start gap-1">
+          <div class="flex items-center gap-1.5 font-bold text-xs sm:text-sm text-amber-300 group-hover:text-amber-200 transition-colors">
+            <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M5 9.2h3V19H5zM10.6 5h2.8v14h-2.8zm5.6 8H19v6h-2.8z"/></svg>
+            <span>종합 통계</span>
+          </div>
+          <div class="flex items-center gap-2 text-[11px] sm:text-xs text-amber-100/90">
+            <span><strong class="text-white font-semibold">${totalMembers}</strong>명 인원</span>
+            <span class="text-amber-500/60">·</span>
+            <span><strong class="text-white font-semibold">${totalVideos}</strong>개 영상</span>
+          </div>
+        </div>
+        <svg class="w-4 h-4 text-amber-400 group-hover:translate-x-0.5 transition-all flex-shrink-0 hidden sm:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      </div>
+    `;
+  } else {
+    statEl.className = "flex items-center justify-center bg-zinc-900/80 hover:bg-zinc-800/90 px-5 sm:px-6 lg:px-7 lg:min-w-[220px] py-2 sm:py-2.5 rounded-2xl border border-zinc-800 hover:border-amber-500/50 flex-shrink-0 cursor-pointer transition-all shadow-md group select-none w-full lg:w-auto";
     statEl.innerHTML = `
       <div class="flex items-center justify-between gap-4 sm:gap-6 w-full">
         <div class="flex flex-col justify-center items-center sm:items-start gap-1">
@@ -789,6 +836,7 @@ function updateStats() {
     `;
   }
 }
+window.updateHeaderStats = updateHeaderStats;
 
 // 날짜 문자열을 밀리초 타임스탬프로 변환 (빠른 날짜일수록 작은 값)
 function parseDateToTimestamp(dateStr) {

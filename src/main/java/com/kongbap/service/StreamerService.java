@@ -58,7 +58,6 @@ public class StreamerService {
         } finally {
             syncLock.unlock();
         }
-        exportStaticJson();
         return result;
     }
 
@@ -374,19 +373,32 @@ public class StreamerService {
         try {
             long count = streamerRepository.count();
             log.info("현재 DB 등록 스트리머 수: {}명", count);
-            Path staticPath = Paths.get("src", "main", "resources", "static", "streamers.json");
-            if (!Files.exists(staticPath)) {
-                staticPath = Paths.get("docs", "streamers.json");
+            if (count > 0) {
+                log.info("MariaDB에 이미 {}명의 스트리머 데이터가 보존되어 있어 초기 시딩을 건너뜁니다. (데이터 보존)", count);
+                return;
             }
+
+            // DB가 비어있는 경우에만 최신 backup.json 또는 정적 streamers.json에서 초기 시딩 수행
+            Path backupPath = Paths.get("D:", "\uBC31\uC5C5 \uD30C\uC77C", "KONGBAP_BACKUPS_JSON", "backup.json");
             String content = null;
-            if (Files.exists(staticPath)) {
-                content = Files.readString(staticPath, StandardCharsets.UTF_8);
-            } else {
-                Path backupPath = Paths.get("D:", "\uBC31\uC5C5 \uD30C\uC77C", "KONGBAP_BACKUPS_JSON", "backup.json");
-                if (Files.exists(backupPath)) {
+            if (Files.exists(backupPath)) {
+                try {
                     content = Files.readString(backupPath, StandardCharsets.UTF_8);
+                    log.info("최신 backup.json 파일로부터 초기 DB 시딩을 시도합니다.");
+                } catch (Exception ignored) {}
+            }
+
+            if (content == null || content.isBlank()) {
+                Path staticPath = Paths.get("src", "main", "resources", "static", "streamers.json");
+                if (!Files.exists(staticPath)) {
+                    staticPath = Paths.get("docs", "streamers.json");
+                }
+                if (Files.exists(staticPath)) {
+                    content = Files.readString(staticPath, StandardCharsets.UTF_8);
+                    log.info("정적 streamers.json 파일로부터 초기 DB 시딩을 시도합니다.");
                 }
             }
+
             if (content != null) {
                 if (content.startsWith("\uFEFF")) {
                     content = content.substring(1);
@@ -420,24 +432,9 @@ public class StreamerService {
                         }
                     }
                     if (!dtoMap.isEmpty()) {
-                        long currentCount = streamerRepository.count();
-                        if (currentCount != dtoMap.size() || currentCount < 228) {
-                            log.info("DB 스트리머 수({}명)와 streamers.json 기준({}명) 불일치 감지. 최신 동기화를 진행합니다.", currentCount, dtoMap.size());
-                            syncStreamers(new ArrayList<>(dtoMap.values()));
-                            Set<String> validIds = dtoMap.keySet();
-                            List<Streamer> allEntities = streamerRepository.findAll();
-                            List<Streamer> toDelete = new ArrayList<>();
-                            for (Streamer s : allEntities) {
-                                if (s.getCustomId() != null && !validIds.contains(s.getCustomId())) {
-                                    log.info("DB 구버전 삭제 대상 추가: {} ({})", s.getCustomId(), s.getName());
-                                    toDelete.add(s);
-                                }
-                            }
-                            if (!toDelete.isEmpty()) {
-                                streamerRepository.deleteAll(toDelete);
-                            }
-                            log.info("DB 스트리머 최신 동기화 완료: 총 {}명", streamerRepository.count());
-                        }
+                        log.info("빈 DB에 초기 스트리머 {}명 시딩을 시작합니다.", dtoMap.size());
+                        syncStreamers(new ArrayList<>(dtoMap.values()));
+                        log.info("DB 초기 스트리머 시딩 완료: 총 {}명", streamerRepository.count());
                     }
                 }
             }
