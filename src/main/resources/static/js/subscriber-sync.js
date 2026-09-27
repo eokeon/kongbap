@@ -390,9 +390,7 @@ async function executeSubscriberSync(onProgress) {
   const targetItems = [];
   for (const m of targets) {
     const target = getSubscriberLookupTarget(m);
-    if (target) {
-      targetItems.push({ member: m, target });
-    }
+    targetItems.push({ member: m, target });
   }
 
   let updatedCount = 0;
@@ -652,7 +650,10 @@ async function executeSubscriberSync(onProgress) {
       const platformPrefix = isChzzk ? "치지직 팔로워" : "유튜브 구독자";
       if (onProgress) onProgress(processedCount, targetItems.length, m.streamer, `성공 (${platformPrefix} ${subStr})`);
     } else {
-      const failReason = (!isChzzk && !apiKey) ? "API 키 미설정" : "조회 실패/비공개";
+      let failReason = (!isChzzk && !apiKey) ? "API 키 미설정" : "조회 실패/비공개";
+      if (!t) {
+        failReason = "URL 형식 확인 필요";
+      }
       if (onProgress) onProgress(processedCount, targetItems.length, m.streamer, failReason);
     }
 
