@@ -1,8 +1,8 @@
 {
   "appName": "kongbap-gta-rp",
   "version": "1.0",
-  "createdAt": "2026.09.28 03:52:22",
-  "reason": "영상 조회수 일괄 갱신 (성공: 2649건, 증가: +1,007회, 조회불가: 71건, 실패: 0건)",
+  "createdAt": "2026.09.28 03:55:31",
+  "reason": "인원 순서 변경: [시민] 임마 (임나은) (43번 → 10번)",
   "stats": {
     "totalCategories": 8,
     "totalMembers": 308,
@@ -44276,6 +44276,241 @@
           "subgroup": null
         },
         {
+          "id": "m-citizen-53",
+          "name": "스즈키주짓수",
+          "streamer": "장마군",
+          "role": "",
+          "swatRole": "",
+          "status": "active",
+          "badgeColor": "bg-purple-600",
+          "avatar": "https://yt3.googleusercontent.com/2duPZObceMnGsJQ6EwJ0wuDOBSiBOaxwShOqb0TfLZTkT2tZYVybu01A8yOwx2IcdYZ0oD7G=s120-c-k-c0x00ffffff-no-rj",
+          "displayOrder": 8,
+          "subscriberCount": "16.7만 명",
+          "youtubeUrl": "https://www.youtube.com/@HardRainer",
+          "videos": [
+            {
+              "id": "v-muk5yn1st4tq9-0",
+              "title": "아키하바라인줄 알고 잘못 온 와패니즈 흑인 '스즈키 주짓수' 【GTA 콩밥 특별시】",
+              "url": "https://www.youtube.com/watch?v=Zchu63bamKo",
+              "videoType": "clip",
+              "date": "2025.06.06",
+              "duration": "22:43",
+              "description": "",
+              "displayOrder": 0,
+              "thumbnailUrl": "https://i.ytimg.com/vi/Zchu63bamKo/mqdefault.jpg",
+              "viewCount": 184780
+            },
+            {
+              "id": "v-muk5yn1s9nxdw-1",
+              "title": "일본인도 환장하는 와패니즈 흑인 【GTA 콩밥 특별시ㅣ스즈키 주짓수】",
+              "url": "https://www.youtube.com/watch?v=2QsXWMPqVbU",
+              "videoType": "clip",
+              "date": "2025.06.09",
+              "duration": "11:40",
+              "description": "",
+              "displayOrder": 1,
+              "thumbnailUrl": "https://i.ytimg.com/vi/2QsXWMPqVbU/mqdefault.jpg",
+              "viewCount": 112717
+            },
+            {
+              "id": "v-muk5yn1s575xi-2",
+              "title": "일본 메이드 카페 처음 와본 와패니즈 흑인 【GTA 콩밥 특별시ㅣ스즈키 주짓수】",
+              "url": "https://www.youtube.com/watch?v=o1ppJyhZk8c",
+              "videoType": "clip",
+              "date": "2025.06.16",
+              "duration": "10:46",
+              "description": "",
+              "displayOrder": 2,
+              "thumbnailUrl": "https://i.ytimg.com/vi/o1ppJyhZk8c/mqdefault.jpg",
+              "viewCount": 59851
+            },
+            {
+              "id": "v-muk5yz89ae0j",
+              "title": "'와패니즈 흑인 미국인 '스즈키 주짓수'' 【2025.05.28 / GTA 대형 서버 - 콩밥 특별시】",
+              "url": "https://www.youtube.com/watch?v=7i-8eBPnt9E&pp=0gcJCS8MAYcqIYzv",
+              "videoType": "full",
+              "date": "2025.07.05",
+              "duration": "2:18:47",
+              "description": "",
+              "displayOrder": 3,
+              "thumbnailUrl": "https://img.youtube.com/vi/7i-8eBPnt9E/hqdefault.jpg",
+              "viewCount": 1549
+            }
+          ],
+          "affiliations": [
+            {
+              "category": "citizen",
+              "subgroup": null,
+              "role": "",
+              "swatRole": "",
+              "status": "active",
+              "badgeColor": "bg-purple-600",
+              "displayOrder": 8
+            }
+          ],
+          "category": "citizen",
+          "subgroup": null
+        },
+        {
+          "id": "m-citizen-40",
+          "name": "임마",
+          "streamer": "임나은",
+          "role": "",
+          "swatRole": "",
+          "status": "active",
+          "badgeColor": "bg-purple-600",
+          "avatar": "https://yt3.googleusercontent.com/NalVY503f-3tsk9Qg5msU7J65c9eAVEsN1RkS3CBkXS_j04G46d9nBNfusaah13u2pC6WWr28Y4=s120-c-k-c0x00ffffff-no-rj",
+          "displayOrder": 9,
+          "subscriberCount": "28만 명",
+          "youtubeUrl": "https://www.youtube.com/@임나은",
+          "videos": [
+            {
+              "id": "v-muk3hoyh6gv1t-0",
+              "title": "초면인 유튜버분의 \"애완동물\"이 되었다",
+              "url": "https://www.youtube.com/watch?v=Xe_Fv7EjGVM",
+              "videoType": "clip",
+              "date": "2025.08.11",
+              "duration": "15:19",
+              "description": "",
+              "displayOrder": 0,
+              "thumbnailUrl": "https://i.ytimg.com/vi/Xe_Fv7EjGVM/mqdefault.jpg",
+              "viewCount": 26573
+            },
+            {
+              "id": "v-muk3hoyhpz4oy-1",
+              "title": "이 맛에 메이드 카페 가는구나...!!!!!!",
+              "url": "https://www.youtube.com/watch?v=vo168qhvDy0",
+              "videoType": "clip",
+              "date": "2025.08.16",
+              "duration": "18:05",
+              "description": "",
+              "displayOrder": 1,
+              "thumbnailUrl": "https://i.ytimg.com/vi/vo168qhvDy0/mqdefault.jpg",
+              "viewCount": 25185
+            }
+          ],
+          "affiliations": [
+            {
+              "category": "citizen",
+              "subgroup": null,
+              "role": "",
+              "swatRole": "",
+              "status": "active",
+              "badgeColor": "bg-purple-600",
+              "displayOrder": 9
+            }
+          ],
+          "category": "citizen",
+          "subgroup": null
+        },
+        {
+          "id": "m-citizen-31",
+          "name": "남자영",
+          "streamer": "감규리",
+          "role": "",
+          "swatRole": "",
+          "status": "active",
+          "badgeColor": "bg-purple-600",
+          "avatar": "https://yt3.googleusercontent.com/hqJ2S-5MMY7OG3Ksr_KvTcdU5PMbwD7ju1D9x83064-Zh6It0n-T5YT0NOdF4V8SwOgZsThxXQ=s120-c-k-c0x00ffffff-no-rj",
+          "displayOrder": 10,
+          "subscriberCount": "15.7만 명",
+          "youtubeUrl": "https://www.youtube.com/@감규리",
+          "videos": [],
+          "affiliations": [
+            {
+              "category": "citizen",
+              "subgroup": null,
+              "role": "",
+              "swatRole": "",
+              "status": "active",
+              "badgeColor": "bg-purple-600",
+              "displayOrder": 10
+            }
+          ],
+          "category": "citizen",
+          "subgroup": null
+        },
+        {
+          "id": "m-citizen-57",
+          "name": "망해타",
+          "streamer": "키코",
+          "role": "",
+          "swatRole": "",
+          "status": "active",
+          "badgeColor": "bg-purple-600",
+          "avatar": "https://yt3.googleusercontent.com/8Trn8S0ko7jMns79-QIuXw-smyRTOcYKKcOyu97hCH4LYKi2EMT4sMZwFStbxiEsAmrxtohUeg=s120-c-k-c0x00ffffff-no-rj",
+          "displayOrder": 11,
+          "subscriberCount": "1.8만 명",
+          "youtubeUrl": "https://www.youtube.com/@kibakobo19",
+          "videos": [
+            {
+              "id": "v-muk6bu0li9ri",
+              "title": "레전드 칼팡맨 칼침택배 사건 재능을 찾아버린 망해타 콩밥 특별시",
+              "url": "https://www.youtube.com/watch?v=_PB_YatMF1A",
+              "videoType": "clip",
+              "date": "2025.06.10",
+              "duration": "9:52",
+              "description": "",
+              "displayOrder": 0,
+              "thumbnailUrl": "https://img.youtube.com/vi/_PB_YatMF1A/hqdefault.jpg",
+              "viewCount": 52416
+            }
+          ],
+          "affiliations": [
+            {
+              "category": "citizen",
+              "subgroup": null,
+              "role": "",
+              "swatRole": "",
+              "status": "active",
+              "badgeColor": "bg-purple-600",
+              "displayOrder": 11
+            }
+          ],
+          "category": "citizen",
+          "subgroup": null
+        },
+        {
+          "id": "m-citizen-4",
+          "name": "난천재",
+          "streamer": "난바다",
+          "role": "",
+          "swatRole": "",
+          "status": "active",
+          "badgeColor": "bg-purple-600",
+          "avatar": "https://yt3.googleusercontent.com/-aASw9tvgE4_BHSXPvEztVPy38rBjxghhBH6bb5IVJA6cy9vn7EQwMJv4aqvqFnzQ058mqmn=s120-c-k-c0x00ffffff-no-rj",
+          "displayOrder": 12,
+          "subscriberCount": "1.2만 명",
+          "youtubeUrl": "https://www.youtube.com/@NANBADA_",
+          "videos": [
+            {
+              "id": "v-muhae9eh4h2i",
+              "title": "[2025.05.27] 콩밥특별시",
+              "url": "https://www.youtube.com/watch?v=rkBomW6biEM&pp=0gcJCS8MAYcqIYzv",
+              "videoType": "full",
+              "date": "2025.12.14",
+              "duration": "4:01:06",
+              "description": "",
+              "displayOrder": 0,
+              "thumbnailUrl": "https://img.youtube.com/vi/rkBomW6biEM/hqdefault.jpg",
+              "viewCount": 39
+            }
+          ],
+          "affiliations": [
+            {
+              "category": "citizen",
+              "subgroup": null,
+              "role": "",
+              "swatRole": "",
+              "status": "active",
+              "badgeColor": "bg-purple-600",
+              "displayOrder": 12
+            }
+          ],
+          "category": "citizen",
+          "subgroup": null
+        },
+        {
           "id": "m-citizen-3",
           "name": "로봇",
           "streamer": "김나성",
@@ -44284,7 +44519,7 @@
           "status": "active",
           "badgeColor": "bg-purple-600",
           "avatar": "https://yt3.googleusercontent.com/ytc/AIdro_nAecRpitIcc2UfDTVv1wk2Z8_POW0HZg24NyQHnnneN9M=s120-c-k-c0x00ffffff-no-rj",
-          "displayOrder": 8,
+          "displayOrder": 13,
           "subscriberCount": "5.8만 명",
           "youtubeUrl": "https://www.youtube.com/@Naseongkim",
           "videos": [
@@ -44345,114 +44580,7 @@
               "swatRole": "",
               "status": "active",
               "badgeColor": "bg-purple-600",
-              "displayOrder": 8
-            }
-          ],
-          "category": "citizen",
-          "subgroup": null
-        },
-        {
-          "id": "m-citizen-31",
-          "name": "남자영",
-          "streamer": "감규리",
-          "role": "",
-          "swatRole": "",
-          "status": "active",
-          "badgeColor": "bg-purple-600",
-          "avatar": "https://yt3.googleusercontent.com/hqJ2S-5MMY7OG3Ksr_KvTcdU5PMbwD7ju1D9x83064-Zh6It0n-T5YT0NOdF4V8SwOgZsThxXQ=s120-c-k-c0x00ffffff-no-rj",
-          "displayOrder": 9,
-          "subscriberCount": "15.7만 명",
-          "youtubeUrl": "https://www.youtube.com/@감규리",
-          "videos": [],
-          "affiliations": [
-            {
-              "category": "citizen",
-              "subgroup": null,
-              "role": "",
-              "swatRole": "",
-              "status": "active",
-              "badgeColor": "bg-purple-600",
-              "displayOrder": 9
-            }
-          ],
-          "category": "citizen",
-          "subgroup": null
-        },
-        {
-          "id": "m-citizen-57",
-          "name": "망해타",
-          "streamer": "키코",
-          "role": "",
-          "swatRole": "",
-          "status": "active",
-          "badgeColor": "bg-purple-600",
-          "avatar": "https://yt3.googleusercontent.com/8Trn8S0ko7jMns79-QIuXw-smyRTOcYKKcOyu97hCH4LYKi2EMT4sMZwFStbxiEsAmrxtohUeg=s120-c-k-c0x00ffffff-no-rj",
-          "displayOrder": 10,
-          "subscriberCount": "1.8만 명",
-          "youtubeUrl": "https://www.youtube.com/@kibakobo19",
-          "videos": [
-            {
-              "id": "v-muk6bu0li9ri",
-              "title": "레전드 칼팡맨 칼침택배 사건 재능을 찾아버린 망해타 콩밥 특별시",
-              "url": "https://www.youtube.com/watch?v=_PB_YatMF1A",
-              "videoType": "clip",
-              "date": "2025.06.10",
-              "duration": "9:52",
-              "description": "",
-              "displayOrder": 0,
-              "thumbnailUrl": "https://img.youtube.com/vi/_PB_YatMF1A/hqdefault.jpg",
-              "viewCount": 52416
-            }
-          ],
-          "affiliations": [
-            {
-              "category": "citizen",
-              "subgroup": null,
-              "role": "",
-              "swatRole": "",
-              "status": "active",
-              "badgeColor": "bg-purple-600",
-              "displayOrder": 10
-            }
-          ],
-          "category": "citizen",
-          "subgroup": null
-        },
-        {
-          "id": "m-citizen-4",
-          "name": "난천재",
-          "streamer": "난바다",
-          "role": "",
-          "swatRole": "",
-          "status": "active",
-          "badgeColor": "bg-purple-600",
-          "avatar": "https://yt3.googleusercontent.com/-aASw9tvgE4_BHSXPvEztVPy38rBjxghhBH6bb5IVJA6cy9vn7EQwMJv4aqvqFnzQ058mqmn=s120-c-k-c0x00ffffff-no-rj",
-          "displayOrder": 11,
-          "subscriberCount": "1.2만 명",
-          "youtubeUrl": "https://www.youtube.com/@NANBADA_",
-          "videos": [
-            {
-              "id": "v-muhae9eh4h2i",
-              "title": "[2025.05.27] 콩밥특별시",
-              "url": "https://www.youtube.com/watch?v=rkBomW6biEM&pp=0gcJCS8MAYcqIYzv",
-              "videoType": "full",
-              "date": "2025.12.14",
-              "duration": "4:01:06",
-              "description": "",
-              "displayOrder": 0,
-              "thumbnailUrl": "https://img.youtube.com/vi/rkBomW6biEM/hqdefault.jpg",
-              "viewCount": 39
-            }
-          ],
-          "affiliations": [
-            {
-              "category": "citizen",
-              "subgroup": null,
-              "role": "",
-              "swatRole": "",
-              "status": "active",
-              "badgeColor": "bg-purple-600",
-              "displayOrder": 11
+              "displayOrder": 13
             }
           ],
           "category": "citizen",
@@ -44467,7 +44595,7 @@
           "status": "active",
           "badgeColor": "bg-purple-600",
           "avatar": "https://yt3.googleusercontent.com/2DTkI2H_zwQb32SYl0m_R3LHOkr2Rt_pF8FA_zRNwJxh9Io9hMdXc0D7qHf4xWC2AhzFdaww_g=s120-c-k-c0x00ffffff-no-rj",
-          "displayOrder": 12,
+          "displayOrder": 14,
           "subscriberCount": "3,400명",
           "youtubeUrl": "https://www.youtube.com/@냥냥두둥",
           "videos": [],
@@ -44479,7 +44607,7 @@
               "swatRole": "",
               "status": "active",
               "badgeColor": "bg-purple-600",
-              "displayOrder": 12
+              "displayOrder": 14
             }
           ],
           "category": "citizen",
@@ -44494,7 +44622,7 @@
           "status": "active",
           "badgeColor": "bg-purple-600",
           "avatar": "https://yt3.googleusercontent.com/bf1qLntVIRu147CtIIINU1gY_6y3WwVxpqS0augPCqWiTGoZhEzC485xSB1XxZIB4KSAuWEG=s120-c-k-c0x00ffffff-no-rj",
-          "displayOrder": 13,
+          "displayOrder": 15,
           "subscriberCount": "17.1만 명",
           "youtubeUrl": "https://www.youtube.com/@doghole",
           "videos": [
@@ -44531,7 +44659,7 @@
               "swatRole": "",
               "status": "active",
               "badgeColor": "bg-purple-600",
-              "displayOrder": 13
+              "displayOrder": 15
             }
           ],
           "category": "citizen",
@@ -44546,7 +44674,7 @@
           "status": "active",
           "badgeColor": "bg-purple-600",
           "avatar": "https://yt3.googleusercontent.com/K1y3QTTnXy7_9BZLPI4pOYrPgXM7_BXtSJCPy9ZDYPiV8-qm2uFFhzhTl1QoBnn-9yarGMAQVA=s120-c-k-c0x00ffffff-no-rj",
-          "displayOrder": 14,
+          "displayOrder": 16,
           "subscriberCount": "6,200명",
           "youtubeUrl": "https://www.youtube.com/@dodor_i",
           "videos": [
@@ -44643,7 +44771,7 @@
               "swatRole": "",
               "status": "active",
               "badgeColor": "bg-purple-600",
-              "displayOrder": 14
+              "displayOrder": 16
             }
           ],
           "category": "citizen",
@@ -44658,7 +44786,7 @@
           "status": "active",
           "badgeColor": "bg-purple-600",
           "avatar": "https://yt3.googleusercontent.com/ytc/AIdro_kgCYYZzwsntX24nSINU8CSlTePCo0ETs3auvbmn-s82bM=s120-c-k-c0x00ffffff-no-rj",
-          "displayOrder": 15,
+          "displayOrder": 17,
           "subscriberCount": "33.3만 명",
           "youtubeUrl": "https://www.youtube.com/@라디유",
           "videos": [
@@ -44695,7 +44823,7 @@
               "swatRole": "",
               "status": "active",
               "badgeColor": "bg-purple-600",
-              "displayOrder": 15
+              "displayOrder": 17
             }
           ],
           "category": "citizen",
@@ -44710,7 +44838,7 @@
           "status": "active",
           "badgeColor": "bg-purple-600",
           "avatar": "https://yt3.googleusercontent.com/AeSlx1BmReH3QkdY6biEFYN3kKSgHlbBpIpIVu82yXBifReJ5_1f185C80qkpf7JtfN-Cdgg=s120-c-k-c0x00ffffff-no-rj",
-          "displayOrder": 16,
+          "displayOrder": 18,
           "subscriberCount": "4.7만 명",
           "youtubeUrl": "https://www.youtube.com/@lumyon",
           "videos": [],
@@ -44722,7 +44850,7 @@
               "swatRole": "",
               "status": "active",
               "badgeColor": "bg-purple-600",
-              "displayOrder": 16
+              "displayOrder": 18
             }
           ],
           "category": "citizen",
@@ -44737,7 +44865,7 @@
           "status": "active",
           "badgeColor": "bg-purple-600",
           "avatar": "https://yt3.googleusercontent.com/KoR8pGSkD8mo7MPeaafcYJMrM5ksWBrK2CG5YzJm39bIpvrKQrNHr9PVIcRklQS0R7UOYBrnMI8=s120-c-k-c0x00ffffff-no-rj",
-          "displayOrder": 17,
+          "displayOrder": 19,
           "subscriberCount": "14.5만 명",
           "youtubeUrl": "https://www.youtube.com/@마레플로스00",
           "videos": [
@@ -44762,7 +44890,7 @@
               "swatRole": "",
               "status": "active",
               "badgeColor": "bg-purple-600",
-              "displayOrder": 17
+              "displayOrder": 19
             }
           ],
           "category": "citizen",
@@ -44777,7 +44905,7 @@
           "status": "active",
           "badgeColor": "bg-purple-600",
           "avatar": "https://yt3.googleusercontent.com/4zjmxrBP9_M6ZG3efUMAXwSmFdCC8yGKOK0eofhvZYCp6s6K6_LIErG_ujVbxhdkfYo1gahecA=s120-c-k-c0x00ffffff-no-rj",
-          "displayOrder": 18,
+          "displayOrder": 20,
           "subscriberCount": "1.6만 명",
           "youtubeUrl": "https://www.youtube.com/@sen_carmen",
           "videos": [
@@ -44850,7 +44978,7 @@
               "swatRole": "",
               "status": "active",
               "badgeColor": "bg-purple-600",
-              "displayOrder": 18
+              "displayOrder": 20
             }
           ],
           "category": "citizen",
@@ -44865,7 +44993,7 @@
           "status": "active",
           "badgeColor": "bg-purple-600",
           "avatar": "https://yt3.googleusercontent.com/ewcGSpqjTvLYYmLTEe0WnySFZgXOfoFNHueD4hsiOBUcRJ58ABSrhWzH-voWzIVd7o2mfcp5GQ=s120-c-k-c0x00ffffff-no-rj",
-          "displayOrder": 19,
+          "displayOrder": 21,
           "subscriberCount": "1.1만 명",
           "youtubeUrl": "https://www.youtube.com/@soyeoni__",
           "videos": [],
@@ -44877,7 +45005,7 @@
               "swatRole": "",
               "status": "active",
               "badgeColor": "bg-purple-600",
-              "displayOrder": 19
+              "displayOrder": 21
             }
           ],
           "category": "citizen",
@@ -44892,7 +45020,7 @@
           "status": "active",
           "badgeColor": "bg-purple-600",
           "avatar": "https://yt3.googleusercontent.com/h2lR6u97Uqmd9vluzz4X3FUW5fPAHJWM6cdYgYyQiwmZaIStIppIcJNS2oJQIvcSBf7N6tKzZg=s120-c-k-c0x00ffffff-no-rj",
-          "displayOrder": 20,
+          "displayOrder": 22,
           "subscriberCount": "23.3만 명",
           "youtubeUrl": "https://www.youtube.com/@SOONDANGMOO",
           "videos": [],
@@ -44904,7 +45032,7 @@
               "swatRole": "",
               "status": "active",
               "badgeColor": "bg-purple-600",
-              "displayOrder": 20
+              "displayOrder": 22
             }
           ],
           "category": "citizen",
@@ -44919,7 +45047,7 @@
           "status": "active",
           "badgeColor": "bg-purple-600",
           "avatar": "https://yt3.googleusercontent.com/ugCpRj-ezbsI6TvUs3eiHF7NyKoJ66IPXbRPHTpKI5qLePvwNDydomLTsA5M57YBb5kQKnud3A=s120-c-k-c0x00ffffff-no-rj",
-          "displayOrder": 21,
+          "displayOrder": 23,
           "subscriberCount": "6,650명",
           "youtubeUrl": "https://www.youtube.com/@supermk_01",
           "videos": [
@@ -44944,7 +45072,7 @@
               "swatRole": "",
               "status": "active",
               "badgeColor": "bg-purple-600",
-              "displayOrder": 21
+              "displayOrder": 23
             }
           ],
           "category": "citizen",
@@ -44959,7 +45087,7 @@
           "status": "active",
           "badgeColor": "bg-purple-600",
           "avatar": "https://yt3.googleusercontent.com/QK2nrf-Xyduit7Q6GvF0mfpHe1en6JwnQk7hxGB9kZM5OoPOFxweuHib4VMrzcAkzu1_OxIl=s120-c-k-c0x00ffffff-no-rj",
-          "displayOrder": 22,
+          "displayOrder": 24,
           "subscriberCount": "3.7만 명",
           "youtubeUrl": "https://www.youtube.com/@앙코",
           "videos": [],
@@ -44971,7 +45099,7 @@
               "swatRole": "",
               "status": "active",
               "badgeColor": "bg-purple-600",
-              "displayOrder": 22
+              "displayOrder": 24
             }
           ],
           "category": "citizen",
@@ -44986,7 +45114,7 @@
           "status": "active",
           "badgeColor": "bg-purple-600",
           "avatar": "https://yt3.googleusercontent.com/MnVd3jO5FmPN4coGPrSbVg4mmpJ2g6BkBbPAs4B5Z-9WcgJp_6IOaWlfC1UVguRqp5VOPFM6=s120-c-k-c0x00ffffff-no-rj",
-          "displayOrder": 23,
+          "displayOrder": 25,
           "subscriberCount": "1.8만 명",
           "youtubeUrl": "https://www.youtube.com/@양망두",
           "videos": [
@@ -45047,7 +45175,7 @@
               "swatRole": "",
               "status": "active",
               "badgeColor": "bg-purple-600",
-              "displayOrder": 23
+              "displayOrder": 25
             }
           ],
           "category": "citizen",
@@ -45062,7 +45190,7 @@
           "status": "active",
           "badgeColor": "bg-purple-600",
           "avatar": "https://yt3.googleusercontent.com/6YIaHAZWrOno3A5g_rKedjxD3nMOZ7OrODz0MmmGDUidEIZMXbyAnfCOM-ZCjRteJFCUtNyfYnM=s120-c-k-c0x00ffffff-no-rj",
-          "displayOrder": 24,
+          "displayOrder": 26,
           "subscriberCount": "1,180명",
           "youtubeUrl": "https://www.youtube.com/@yeoringee",
           "videos": [],
@@ -45074,7 +45202,7 @@
               "swatRole": "",
               "status": "active",
               "badgeColor": "bg-purple-600",
-              "displayOrder": 24
+              "displayOrder": 26
             }
           ],
           "category": "citizen",
@@ -45089,7 +45217,7 @@
           "status": "active",
           "badgeColor": "bg-purple-600",
           "avatar": "https://yt3.googleusercontent.com/ZdJoWrcKkYm5QEPiUv5KlHLNK9BO9xx4yp7U0yZUMqoqr1OMEp6bE4MKPqIJQ45HVnu3kInZ=s120-c-k-c0x00ffffff-no-rj",
-          "displayOrder": 25,
+          "displayOrder": 27,
           "subscriberCount": "8,220명",
           "youtubeUrl": "https://www.youtube.com/@bominzz",
           "videos": [
@@ -45222,7 +45350,7 @@
               "swatRole": "",
               "status": "active",
               "badgeColor": "bg-purple-600",
-              "displayOrder": 25
+              "displayOrder": 27
             }
           ],
           "category": "citizen",
@@ -45237,7 +45365,7 @@
           "status": "active",
           "badgeColor": "bg-purple-600",
           "avatar": "https://yt3.googleusercontent.com/rW3eA959OHHtfz5L5BFlEQZM6HxM8x2HeOL4nHidtzQXfIZFwi4L-1v2QDvsz286XI8s80a1=s120-c-k-c0x00ffffff-no-rj",
-          "displayOrder": 26,
+          "displayOrder": 28,
           "subscriberCount": "3,550명",
           "youtubeUrl": "https://www.youtube.com/@otw_onharu",
           "videos": [
@@ -45286,7 +45414,7 @@
               "swatRole": "",
               "status": "active",
               "badgeColor": "bg-purple-600",
-              "displayOrder": 26
+              "displayOrder": 28
             }
           ],
           "category": "citizen",
@@ -45301,7 +45429,7 @@
           "status": "active",
           "badgeColor": "bg-purple-600",
           "avatar": "https://yt3.googleusercontent.com/yrxPTQwaG9FpgqiCan0xC1GhNXn7iGxzykfcepFdndWx-mwauQLrk9vMGXBGiDOW8uHN53vfsIA=s120-c-k-c0x00ffffff-no-rj",
-          "displayOrder": 27,
+          "displayOrder": 29,
           "subscriberCount": "5.9만 명",
           "youtubeUrl": "https://www.youtube.com/@윤치",
           "videos": [],
@@ -45313,7 +45441,7 @@
               "swatRole": "",
               "status": "active",
               "badgeColor": "bg-purple-600",
-              "displayOrder": 27
+              "displayOrder": 29
             }
           ],
           "category": "citizen",
@@ -45328,7 +45456,7 @@
           "status": "active",
           "badgeColor": "bg-purple-600",
           "avatar": "https://yt3.googleusercontent.com/IOjyVztNJEIelTmyGEhquRAff5RS9KbwVlNWG8kE7HHFdRvz4bnovx5niHOlRNZGG9QTV6jEHR8=s120-c-k-c0x00ffffff-no-rj",
-          "displayOrder": 28,
+          "displayOrder": 30,
           "subscriberCount": "8,640명",
           "youtubeUrl": "https://www.youtube.com/@eunppu",
           "videos": [],
@@ -45340,7 +45468,7 @@
               "swatRole": "",
               "status": "active",
               "badgeColor": "bg-purple-600",
-              "displayOrder": 28
+              "displayOrder": 30
             }
           ],
           "category": "citizen",
@@ -45355,7 +45483,7 @@
           "status": "active",
           "badgeColor": "bg-purple-600",
           "avatar": "https://yt3.googleusercontent.com/d8UJeYI3MJnbErYzF_7XZ7S6KydYe7yX8rgrMvQElLc5QOKXI1xCD0lnnD00oZwZ8bg8IEmVpQ=s120-c-k-c0x00ffffff-no-rj",
-          "displayOrder": 29,
+          "displayOrder": 31,
           "subscriberCount": "47.2만 명",
           "youtubeUrl": "https://www.youtube.com/@chochou",
           "videos": [
@@ -45476,7 +45604,7 @@
               "swatRole": "",
               "status": "active",
               "badgeColor": "bg-purple-600",
-              "displayOrder": 29
+              "displayOrder": 31
             }
           ],
           "category": "citizen",
@@ -45491,7 +45619,7 @@
           "status": "active",
           "badgeColor": "bg-purple-600",
           "avatar": "https://nng-phinf.pstatic.net/MjAyNjA4MDJfMTEx/MDAxNzg1NTk4MzQ5MTA4.XsrcrDZSa6Xa9KtVAtSqASBDwlJXzhiEX70G-NuR2xwg.U-mfImWOLUk2k7PLWiMtKf1wEfEC6HpUzWu9P9RzoQcg.JPEG/image.jpg?type=f120_120_na",
-          "displayOrder": 30,
+          "displayOrder": 32,
           "subscriberCount": "5,377명",
           "youtubeUrl": "https://chzzk.naver.com/dc296b356b142e8be62909568657d038",
           "videos": [],
@@ -45503,7 +45631,7 @@
               "swatRole": "",
               "status": "active",
               "badgeColor": "bg-purple-600",
-              "displayOrder": 30
+              "displayOrder": 32
             }
           ],
           "category": "citizen",
@@ -45518,7 +45646,7 @@
           "status": "active",
           "badgeColor": "bg-purple-600",
           "avatar": "https://yt3.googleusercontent.com/WIrTlCX1VGS3BAkjHowaQWTdtOMAI12Lnw0esUOQRm7ijU9OwVhAtWPlqVoU_AayEkaQAYR6Wz8=s120-c-k-c0x00ffffff-no-rj",
-          "displayOrder": 31,
+          "displayOrder": 33,
           "subscriberCount": "3.4만 명",
           "youtubeUrl": "https://www.youtube.com/@REYOU_S2",
           "videos": [],
@@ -45530,7 +45658,7 @@
               "swatRole": "",
               "status": "active",
               "badgeColor": "bg-purple-600",
-              "displayOrder": 31
+              "displayOrder": 33
             }
           ],
           "category": "citizen",
@@ -45545,7 +45673,7 @@
           "status": "active",
           "badgeColor": "bg-purple-600",
           "avatar": "https://yt3.googleusercontent.com/ytc/AIdro_lmsmyhaLroWrCp5Q9gIBujlmE_E1PKlgX3A6Nu86IGnIc=s120-c-k-c0x00ffffff-no-rj",
-          "displayOrder": 32,
+          "displayOrder": 34,
           "subscriberCount": "50.5만 명",
           "youtubeUrl": "https://www.youtube.com/@플레임TV",
           "videos": [
@@ -45570,7 +45698,7 @@
               "swatRole": "",
               "status": "active",
               "badgeColor": "bg-purple-600",
-              "displayOrder": 32
+              "displayOrder": 34
             }
           ],
           "category": "citizen",
@@ -45585,7 +45713,7 @@
           "status": "active",
           "badgeColor": "bg-purple-600",
           "avatar": "https://yt3.googleusercontent.com/zmh1LOez69G73xqvXjeyWjLCrigftmnFjC4iVNjq1PSvSMpexS5Jjo9ErFwQzBfXBfOh6P02=s120-c-k-c0x00ffffff-no-rj",
-          "displayOrder": 33,
+          "displayOrder": 35,
           "subscriberCount": "1.6만 명",
           "youtubeUrl": "https://www.youtube.com/@otw_hane",
           "videos": [
@@ -45670,7 +45798,7 @@
               "swatRole": "",
               "status": "active",
               "badgeColor": "bg-purple-600",
-              "displayOrder": 33
+              "displayOrder": 35
             }
           ],
           "category": "citizen",
@@ -45685,63 +45813,9 @@
           "status": "active",
           "badgeColor": "bg-purple-600",
           "avatar": "https://yt3.googleusercontent.com/l6flf5NGvPN-MyebCDBYUNWn7YETnbQ6OnGTrsWwSqVzdWI1FVru9STY1e4qzuUhCE6Sgcwl=s120-c-k-c0x00ffffff-no-rj",
-          "displayOrder": 34,
+          "displayOrder": 36,
           "subscriberCount": "2.2만 명",
           "youtubeUrl": "https://www.youtube.com/@라꼬미",
-          "videos": [],
-          "affiliations": [
-            {
-              "category": "citizen",
-              "subgroup": null,
-              "role": "",
-              "swatRole": "",
-              "status": "active",
-              "badgeColor": "bg-purple-600",
-              "displayOrder": 34
-            }
-          ],
-          "category": "citizen",
-          "subgroup": null
-        },
-        {
-          "id": "m-citizen-33",
-          "name": "오덕희",
-          "streamer": "루다",
-          "role": "",
-          "swatRole": "",
-          "status": "active",
-          "badgeColor": "bg-purple-600",
-          "avatar": "https://yt3.googleusercontent.com/HoUxTcAXfIpmekUkbEMhxtyKiK-FeNOXr_Pp63KlAGeVZdxpHwA3VrioK3xuWct4FM13u0BayKY=s120-c-k-c0x00ffffff-no-rj",
-          "displayOrder": 35,
-          "subscriberCount": "3,950명",
-          "youtubeUrl": "https://www.youtube.com/@iam_luda",
-          "videos": [],
-          "affiliations": [
-            {
-              "category": "citizen",
-              "subgroup": null,
-              "role": "",
-              "swatRole": "",
-              "status": "active",
-              "badgeColor": "bg-purple-600",
-              "displayOrder": 35
-            }
-          ],
-          "category": "citizen",
-          "subgroup": null
-        },
-        {
-          "id": "m-citizen-34",
-          "name": "홀리퀸",
-          "streamer": "베 라",
-          "role": "",
-          "swatRole": "",
-          "status": "active",
-          "badgeColor": "bg-purple-600",
-          "avatar": "https://yt3.googleusercontent.com/cCe7icnJgslpmTm8fHzgL24sSPaZArLYQjQtj61Tt1Nr7ccaQ0-jUZzB2ucQVVi-JspemFIEnZo=s120-c-k-c0x00ffffff-no-rj",
-          "displayOrder": 36,
-          "subscriberCount": "1,900명",
-          "youtubeUrl": "https://www.youtube.com/@vera_zzang",
           "videos": [],
           "affiliations": [
             {
@@ -45758,17 +45832,17 @@
           "subgroup": null
         },
         {
-          "id": "m-citizen-35",
-          "name": "망가리나",
-          "streamer": "비타민망고",
+          "id": "m-citizen-33",
+          "name": "오덕희",
+          "streamer": "루다",
           "role": "",
           "swatRole": "",
           "status": "active",
           "badgeColor": "bg-purple-600",
-          "avatar": "https://nng-phinf.pstatic.net/MjAyNjA4MjlfMTA0/MDAxNzg4MDAyOTYwMDAz.eG2bdaS781kkzbYNRQgRNuCLKIgoa62bzpEUGxFubvkg.UNv9BIe1vVYs3YGYonCWchg0nBfVExCHQTsOCfStrm8g.PNG/image.png?type=f120_120_na",
+          "avatar": "https://yt3.googleusercontent.com/HoUxTcAXfIpmekUkbEMhxtyKiK-FeNOXr_Pp63KlAGeVZdxpHwA3VrioK3xuWct4FM13u0BayKY=s120-c-k-c0x00ffffff-no-rj",
           "displayOrder": 37,
-          "subscriberCount": "5,931명",
-          "youtubeUrl": "https://chzzk.naver.com/729e312b230566783e1b9d3bf3a75cdc",
+          "subscriberCount": "3,950명",
+          "youtubeUrl": "https://www.youtube.com/@iam_luda",
           "videos": [],
           "affiliations": [
             {
@@ -45785,6 +45859,60 @@
           "subgroup": null
         },
         {
+          "id": "m-citizen-34",
+          "name": "홀리퀸",
+          "streamer": "베 라",
+          "role": "",
+          "swatRole": "",
+          "status": "active",
+          "badgeColor": "bg-purple-600",
+          "avatar": "https://yt3.googleusercontent.com/cCe7icnJgslpmTm8fHzgL24sSPaZArLYQjQtj61Tt1Nr7ccaQ0-jUZzB2ucQVVi-JspemFIEnZo=s120-c-k-c0x00ffffff-no-rj",
+          "displayOrder": 38,
+          "subscriberCount": "1,900명",
+          "youtubeUrl": "https://www.youtube.com/@vera_zzang",
+          "videos": [],
+          "affiliations": [
+            {
+              "category": "citizen",
+              "subgroup": null,
+              "role": "",
+              "swatRole": "",
+              "status": "active",
+              "badgeColor": "bg-purple-600",
+              "displayOrder": 38
+            }
+          ],
+          "category": "citizen",
+          "subgroup": null
+        },
+        {
+          "id": "m-citizen-35",
+          "name": "망가리나",
+          "streamer": "비타민망고",
+          "role": "",
+          "swatRole": "",
+          "status": "active",
+          "badgeColor": "bg-purple-600",
+          "avatar": "https://nng-phinf.pstatic.net/MjAyNjA4MjlfMTA0/MDAxNzg4MDAyOTYwMDAz.eG2bdaS781kkzbYNRQgRNuCLKIgoa62bzpEUGxFubvkg.UNv9BIe1vVYs3YGYonCWchg0nBfVExCHQTsOCfStrm8g.PNG/image.png?type=f120_120_na",
+          "displayOrder": 39,
+          "subscriberCount": "5,931명",
+          "youtubeUrl": "https://chzzk.naver.com/729e312b230566783e1b9d3bf3a75cdc",
+          "videos": [],
+          "affiliations": [
+            {
+              "category": "citizen",
+              "subgroup": null,
+              "role": "",
+              "swatRole": "",
+              "status": "active",
+              "badgeColor": "bg-purple-600",
+              "displayOrder": 39
+            }
+          ],
+          "category": "citizen",
+          "subgroup": null
+        },
+        {
           "id": "m-citizen-36",
           "name": "박남수",
           "streamer": "에땁AWM",
@@ -45793,7 +45921,7 @@
           "status": "active",
           "badgeColor": "bg-purple-600",
           "avatar": "https://yt3.googleusercontent.com/ohNDqqHDz7KrxQMfHSXLsrVykSFiTRN8lpAT1_oIvLQyqF9FtFJ8qpFkZQbbZqbecUF_NenZ=s120-c-k-c0x00ffffff-no-rj",
-          "displayOrder": 38,
+          "displayOrder": 40,
           "subscriberCount": "12.9만 명",
           "youtubeUrl": "https://www.youtube.com/@박남수01",
           "videos": [
@@ -45818,7 +45946,7 @@
               "swatRole": "",
               "status": "active",
               "badgeColor": "bg-purple-600",
-              "displayOrder": 38
+              "displayOrder": 40
             }
           ],
           "category": "citizen",
@@ -45833,89 +45961,10 @@
           "status": "active",
           "badgeColor": "bg-purple-600",
           "avatar": "https://yt3.googleusercontent.com/vPA5Uur1i8_5wjqTOVsVa5zjrstnUTnuJsS9m0IBjQ3YNpHP2_pY8AKXxI-pBl3PUmTw8WDN=s120-c-k-c0x00ffffff-no-rj",
-          "displayOrder": 39,
+          "displayOrder": 41,
           "subscriberCount": "8.3만 명",
           "youtubeUrl": "https://www.youtube.com/@otorainy",
           "videos": [],
-          "affiliations": [
-            {
-              "category": "citizen",
-              "subgroup": null,
-              "role": "",
-              "swatRole": "",
-              "status": "active",
-              "badgeColor": "bg-purple-600",
-              "displayOrder": 39
-            }
-          ],
-          "category": "citizen",
-          "subgroup": null
-        },
-        {
-          "id": "m-citizen-38",
-          "name": "박사",
-          "streamer": "이로 클라우드",
-          "role": "",
-          "swatRole": "",
-          "status": "active",
-          "badgeColor": "bg-purple-600",
-          "avatar": "https://yt3.googleusercontent.com/jXcmr8Gt77rCbvrZSYBZ8oaYSreXfWkBl9bkO6bfwn776BDQnvMJ6xGjD9DuaniAHjAA2-QREQ=s120-c-k-c0x00ffffff-no-rj",
-          "displayOrder": 40,
-          "subscriberCount": "5.3만 명",
-          "youtubeUrl": "https://www.youtube.com/@irocloud",
-          "videos": [],
-          "affiliations": [
-            {
-              "category": "citizen",
-              "subgroup": null,
-              "role": "",
-              "swatRole": "",
-              "status": "active",
-              "badgeColor": "bg-purple-600",
-              "displayOrder": 40
-            }
-          ],
-          "category": "citizen",
-          "subgroup": null
-        },
-        {
-          "id": "m-citizen-40",
-          "name": "임마",
-          "streamer": "임나은",
-          "role": "",
-          "swatRole": "",
-          "status": "active",
-          "badgeColor": "bg-purple-600",
-          "avatar": "https://yt3.googleusercontent.com/NalVY503f-3tsk9Qg5msU7J65c9eAVEsN1RkS3CBkXS_j04G46d9nBNfusaah13u2pC6WWr28Y4=s120-c-k-c0x00ffffff-no-rj",
-          "displayOrder": 41,
-          "subscriberCount": "28만 명",
-          "youtubeUrl": "https://www.youtube.com/@임나은",
-          "videos": [
-            {
-              "id": "v-muk3hoyh6gv1t-0",
-              "title": "초면인 유튜버분의 \"애완동물\"이 되었다",
-              "url": "https://www.youtube.com/watch?v=Xe_Fv7EjGVM",
-              "videoType": "clip",
-              "date": "2025.08.11",
-              "duration": "15:19",
-              "description": "",
-              "displayOrder": 0,
-              "thumbnailUrl": "https://i.ytimg.com/vi/Xe_Fv7EjGVM/mqdefault.jpg",
-              "viewCount": 26573
-            },
-            {
-              "id": "v-muk3hoyhpz4oy-1",
-              "title": "이 맛에 메이드 카페 가는구나...!!!!!!",
-              "url": "https://www.youtube.com/watch?v=vo168qhvDy0",
-              "videoType": "clip",
-              "date": "2025.08.16",
-              "duration": "18:05",
-              "description": "",
-              "displayOrder": 1,
-              "thumbnailUrl": "https://i.ytimg.com/vi/vo168qhvDy0/mqdefault.jpg",
-              "viewCount": 25185
-            }
-          ],
           "affiliations": [
             {
               "category": "citizen",
@@ -45931,17 +45980,17 @@
           "subgroup": null
         },
         {
-          "id": "m-citizen-41",
-          "name": "임요리왕보룡",
-          "streamer": "치킨쿤",
+          "id": "m-citizen-38",
+          "name": "박사",
+          "streamer": "이로 클라우드",
           "role": "",
           "swatRole": "",
           "status": "active",
           "badgeColor": "bg-purple-600",
-          "avatar": "https://yt3.googleusercontent.com/UUD9leP2ZzBEqqScvZvJkCz0dTnV1SypHYkNR13Z6FQU3aljYbY1ikx778JH1XqegdZ3YorGSVk=s120-c-k-c0x00ffffff-no-rj",
+          "avatar": "https://yt3.googleusercontent.com/jXcmr8Gt77rCbvrZSYBZ8oaYSreXfWkBl9bkO6bfwn776BDQnvMJ6xGjD9DuaniAHjAA2-QREQ=s120-c-k-c0x00ffffff-no-rj",
           "displayOrder": 42,
-          "subscriberCount": "15.2만 명",
-          "youtubeUrl": "https://www.youtube.com/@chickenkoon",
+          "subscriberCount": "5.3만 명",
+          "youtubeUrl": "https://www.youtube.com/@irocloud",
           "videos": [],
           "affiliations": [
             {
@@ -45958,6 +46007,33 @@
           "subgroup": null
         },
         {
+          "id": "m-citizen-41",
+          "name": "임요리왕보룡",
+          "streamer": "치킨쿤",
+          "role": "",
+          "swatRole": "",
+          "status": "active",
+          "badgeColor": "bg-purple-600",
+          "avatar": "https://yt3.googleusercontent.com/UUD9leP2ZzBEqqScvZvJkCz0dTnV1SypHYkNR13Z6FQU3aljYbY1ikx778JH1XqegdZ3YorGSVk=s120-c-k-c0x00ffffff-no-rj",
+          "displayOrder": 43,
+          "subscriberCount": "15.2만 명",
+          "youtubeUrl": "https://www.youtube.com/@chickenkoon",
+          "videos": [],
+          "affiliations": [
+            {
+              "category": "citizen",
+              "subgroup": null,
+              "role": "",
+              "swatRole": "",
+              "status": "active",
+              "badgeColor": "bg-purple-600",
+              "displayOrder": 43
+            }
+          ],
+          "category": "citizen",
+          "subgroup": null
+        },
+        {
           "id": "m-citizen-42",
           "name": "인승호",
           "streamer": "프로즈",
@@ -45966,7 +46042,7 @@
           "status": "active",
           "badgeColor": "bg-purple-600",
           "avatar": "https://yt3.googleusercontent.com/q83d9tvJQwx9OnO9W5kJjatoSAXd7z6KsZ-NNaX1W71wbKs7YST52RK4jLR65b3MWtLwVTT3=s120-c-k-c0x00ffffff-no-rj",
-          "displayOrder": 43,
+          "displayOrder": 44,
           "subscriberCount": "12.9만 명",
           "youtubeUrl": "https://www.youtube.com/@프로즈",
           "videos": [
@@ -46003,7 +46079,7 @@
               "swatRole": "",
               "status": "active",
               "badgeColor": "bg-purple-600",
-              "displayOrder": 43
+              "displayOrder": 44
             }
           ],
           "category": "citizen",
@@ -46018,36 +46094,9 @@
           "status": "active",
           "badgeColor": "bg-purple-600",
           "avatar": "https://yt3.googleusercontent.com/ytc/AIdro_mXGYmsnDPlAH6Emdoy6KmWIfgENPgczBxwxi0k7XWgH7w=s120-c-k-c0x00ffffff-no-rj",
-          "displayOrder": 44,
+          "displayOrder": 45,
           "subscriberCount": "3,260명",
           "youtubeUrl": "https://www.youtube.com/@한유월-l9d",
-          "videos": [],
-          "affiliations": [
-            {
-              "category": "citizen",
-              "subgroup": null,
-              "role": "",
-              "swatRole": "",
-              "status": "active",
-              "badgeColor": "bg-purple-600",
-              "displayOrder": 44
-            }
-          ],
-          "category": "citizen",
-          "subgroup": null
-        },
-        {
-          "id": "m-citizen-44",
-          "name": "염이새",
-          "streamer": "해달짱",
-          "role": "",
-          "swatRole": "",
-          "status": "active",
-          "badgeColor": "bg-purple-600",
-          "avatar": "https://nng-phinf.pstatic.net/MjAyNjA5MDdfNTAg/MDAxNzg4NzQ3NDE0MjQ3.Sxc2l1lDuCfjFuGcEyKMuMkSiHtmLSvnyxq94sD8W_gg.qCafC-mP5mnEXbaqOv2JO4aV5YIMbF7wtsWjzJvtQsUg.PNG/image.png?type=f120_120_na",
-          "displayOrder": 45,
-          "subscriberCount": "1.5만 명",
-          "youtubeUrl": "https://chzzk.naver.com/6a9bc1e99c1fe813cccfc699784724d6",
           "videos": [],
           "affiliations": [
             {
@@ -46064,6 +46113,33 @@
           "subgroup": null
         },
         {
+          "id": "m-citizen-44",
+          "name": "염이새",
+          "streamer": "해달짱",
+          "role": "",
+          "swatRole": "",
+          "status": "active",
+          "badgeColor": "bg-purple-600",
+          "avatar": "https://nng-phinf.pstatic.net/MjAyNjA5MDdfNTAg/MDAxNzg4NzQ3NDE0MjQ3.Sxc2l1lDuCfjFuGcEyKMuMkSiHtmLSvnyxq94sD8W_gg.qCafC-mP5mnEXbaqOv2JO4aV5YIMbF7wtsWjzJvtQsUg.PNG/image.png?type=f120_120_na",
+          "displayOrder": 46,
+          "subscriberCount": "1.5만 명",
+          "youtubeUrl": "https://chzzk.naver.com/6a9bc1e99c1fe813cccfc699784724d6",
+          "videos": [],
+          "affiliations": [
+            {
+              "category": "citizen",
+              "subgroup": null,
+              "role": "",
+              "swatRole": "",
+              "status": "active",
+              "badgeColor": "bg-purple-600",
+              "displayOrder": 46
+            }
+          ],
+          "category": "citizen",
+          "subgroup": null
+        },
+        {
           "id": "m-citizen-45",
           "name": "혐이요",
           "streamer": "히요",
@@ -46072,7 +46148,7 @@
           "status": "active",
           "badgeColor": "bg-purple-600",
           "avatar": "https://yt3.googleusercontent.com/bMcagqQVgeXq8CAMlZfBdthi4ZiqMRt2JWlcesM0N2H7_F-bX6HvVYSH0jDBYiYas-7r5qGT=s120-c-k-c0x00ffffff-no-rj",
-          "displayOrder": 46,
+          "displayOrder": 47,
           "subscriberCount": "1,810명",
           "youtubeUrl": "https://www.youtube.com/@hee_yo",
           "videos": [
@@ -46109,7 +46185,7 @@
               "swatRole": "",
               "status": "active",
               "badgeColor": "bg-purple-600",
-              "displayOrder": 46
+              "displayOrder": 47
             }
           ],
           "category": "citizen",
@@ -46124,7 +46200,7 @@
           "status": "active",
           "badgeColor": "bg-purple-600",
           "avatar": "https://yt3.googleusercontent.com/EkwGMSD3r6c5Toz0qG0zwCH8NSZ8KmyCGUp-WvGJ8IhwmNFz6IITtYOj9M54btHtqzbwZd9mgA=s160-c-k-c0x00ffffff-no-rj",
-          "displayOrder": 47,
+          "displayOrder": 48,
           "subscriberCount": "2,690명",
           "youtubeUrl": "https://www.youtube.com/@GuiLing",
           "videos": [
@@ -46233,7 +46309,7 @@
               "swatRole": "",
               "status": "active",
               "badgeColor": "bg-purple-600",
-              "displayOrder": 47
+              "displayOrder": 48
             }
           ],
           "category": "citizen",
@@ -46248,7 +46324,7 @@
           "status": "active",
           "badgeColor": "bg-purple-600",
           "avatar": "https://yt3.googleusercontent.com/VEej6uaAMy5bUr7sW4ASq59ws6LQ1nZGdsnsHbO_z6oQpXk2Kca2pxyDKuNYa1ZIzzDBUyEy3wU=s120-c-k-c0x00ffffff-no-rj",
-          "displayOrder": 48,
+          "displayOrder": 49,
           "subscriberCount": "7,820명",
           "youtubeUrl": "https://www.youtube.com/@jxxnyxjxn",
           "videos": [
@@ -46273,7 +46349,7 @@
               "swatRole": "",
               "status": "active",
               "badgeColor": "bg-purple-600",
-              "displayOrder": 48
+              "displayOrder": 49
             }
           ],
           "category": "citizen",
@@ -46288,36 +46364,9 @@
           "status": "active",
           "badgeColor": "bg-purple-600",
           "avatar": "https://nng-phinf.pstatic.net/MjAyNDA0MDhfMTg0/MDAxNzEyNTA3NzU5NTEz.t_yi17rHwxW5kdRw41wlIvdtnrY9DwGiTZJx9F2d9RQg.svOwIW0kRvG9_M7A_s6SNpLU0hl3cxohfSLly5-AyDIg.JPEG/%ED%94%84%EC%82%AC4.jpg?type=f120_120_na",
-          "displayOrder": 49,
+          "displayOrder": 50,
           "subscriberCount": "3,383명",
           "youtubeUrl": "https://chzzk.naver.com/a0b5a7e5e5b2536f1a2e210b900d7b2a",
-          "videos": [],
-          "affiliations": [
-            {
-              "category": "citizen",
-              "subgroup": null,
-              "role": "",
-              "swatRole": "",
-              "status": "active",
-              "badgeColor": "bg-purple-600",
-              "displayOrder": 49
-            }
-          ],
-          "category": "citizen",
-          "subgroup": null
-        },
-        {
-          "id": "m-citizen-49",
-          "name": "프로감나무",
-          "streamer": "방찌",
-          "role": "",
-          "swatRole": "",
-          "status": "active",
-          "badgeColor": "bg-purple-600",
-          "avatar": "https://yt3.googleusercontent.com/2HRRLd-yDa6XSk8HrzQYv0pTiw10P85vQUcqCcn4inhhJQnD5CW-QQ9R29p_pAvWBKh-6qbh=s120-c-k-c0x00ffffff-no-rj",
-          "displayOrder": 50,
-          "subscriberCount": "2.4만 명",
-          "youtubeUrl": "https://www.youtube.com/@bangjjee__",
           "videos": [],
           "affiliations": [
             {
@@ -46334,17 +46383,17 @@
           "subgroup": null
         },
         {
-          "id": "m-citizen-50",
-          "name": "김데이비드",
-          "streamer": "밴쿠버",
+          "id": "m-citizen-49",
+          "name": "프로감나무",
+          "streamer": "방찌",
           "role": "",
           "swatRole": "",
           "status": "active",
           "badgeColor": "bg-purple-600",
-          "avatar": "https://yt3.googleusercontent.com/u1wRqmG7KJhKuFq4t5xkMuoWzwiWHeRHHM1Ue_bl3tf_7gFos0e9kTizpdnnUeHRTm0JViFi9g=s120-c-k-c0x00ffffff-no-rj",
+          "avatar": "https://yt3.googleusercontent.com/2HRRLd-yDa6XSk8HrzQYv0pTiw10P85vQUcqCcn4inhhJQnD5CW-QQ9R29p_pAvWBKh-6qbh=s120-c-k-c0x00ffffff-no-rj",
           "displayOrder": 51,
-          "subscriberCount": "27.5만 명",
-          "youtubeUrl": "https://www.youtube.com/@vancouverkr",
+          "subscriberCount": "2.4만 명",
+          "youtubeUrl": "https://www.youtube.com/@bangjjee__",
           "videos": [],
           "affiliations": [
             {
@@ -46361,17 +46410,17 @@
           "subgroup": null
         },
         {
-          "id": "m-citizen-51",
-          "name": "소심원창",
-          "streamer": "시메빈",
+          "id": "m-citizen-50",
+          "name": "김데이비드",
+          "streamer": "밴쿠버",
           "role": "",
           "swatRole": "",
           "status": "active",
           "badgeColor": "bg-purple-600",
-          "avatar": "https://yt3.googleusercontent.com/dytvU-UNR5Ux2Nps2q0laBbazdf_YGvOtU3an1W1x-hksH9ukiQXuXe5qsDf5koYF5HXgdzI=s160-c-k-c0x00ffffff-no-rj",
+          "avatar": "https://yt3.googleusercontent.com/u1wRqmG7KJhKuFq4t5xkMuoWzwiWHeRHHM1Ue_bl3tf_7gFos0e9kTizpdnnUeHRTm0JViFi9g=s120-c-k-c0x00ffffff-no-rj",
           "displayOrder": 52,
-          "subscriberCount": "198명",
-          "youtubeUrl": "https://www.youtube.com/@simebinn",
+          "subscriberCount": "27.5만 명",
+          "youtubeUrl": "https://www.youtube.com/@vancouverkr",
           "videos": [],
           "affiliations": [
             {
@@ -46388,17 +46437,17 @@
           "subgroup": null
         },
         {
-          "id": "m-citizen-52",
-          "name": "아오카와잔업사",
-          "streamer": "아오카와 아즈사",
+          "id": "m-citizen-51",
+          "name": "소심원창",
+          "streamer": "시메빈",
           "role": "",
           "swatRole": "",
           "status": "active",
           "badgeColor": "bg-purple-600",
-          "avatar": "https://yt3.googleusercontent.com/POfWBFTjSBHhH2JCn_LSkPq47HPLx0jJF0YCeri2kVkzRGAIbbSF49hfRrgBBaZghBzuwB73CfI=s120-c-k-c0x00ffffff-no-rj",
+          "avatar": "https://yt3.googleusercontent.com/dytvU-UNR5Ux2Nps2q0laBbazdf_YGvOtU3an1W1x-hksH9ukiQXuXe5qsDf5koYF5HXgdzI=s160-c-k-c0x00ffffff-no-rj",
           "displayOrder": 53,
-          "subscriberCount": "2,010명",
-          "youtubeUrl": "https://www.youtube.com/@Azusa_Aokawa",
+          "subscriberCount": "198명",
+          "youtubeUrl": "https://www.youtube.com/@simebinn",
           "videos": [],
           "affiliations": [
             {
@@ -46415,67 +46464,18 @@
           "subgroup": null
         },
         {
-          "id": "m-citizen-53",
-          "name": "스즈키주짓수",
-          "streamer": "장마군",
+          "id": "m-citizen-52",
+          "name": "아오카와잔업사",
+          "streamer": "아오카와 아즈사",
           "role": "",
           "swatRole": "",
           "status": "active",
           "badgeColor": "bg-purple-600",
-          "avatar": "https://yt3.googleusercontent.com/2duPZObceMnGsJQ6EwJ0wuDOBSiBOaxwShOqb0TfLZTkT2tZYVybu01A8yOwx2IcdYZ0oD7G=s120-c-k-c0x00ffffff-no-rj",
+          "avatar": "https://yt3.googleusercontent.com/POfWBFTjSBHhH2JCn_LSkPq47HPLx0jJF0YCeri2kVkzRGAIbbSF49hfRrgBBaZghBzuwB73CfI=s120-c-k-c0x00ffffff-no-rj",
           "displayOrder": 54,
-          "subscriberCount": "16.7만 명",
-          "youtubeUrl": "https://www.youtube.com/@HardRainer",
-          "videos": [
-            {
-              "id": "v-muk5yn1st4tq9-0",
-              "title": "아키하바라인줄 알고 잘못 온 와패니즈 흑인 '스즈키 주짓수' 【GTA 콩밥 특별시】",
-              "url": "https://www.youtube.com/watch?v=Zchu63bamKo",
-              "videoType": "clip",
-              "date": "2025.06.06",
-              "duration": "22:43",
-              "description": "",
-              "displayOrder": 0,
-              "thumbnailUrl": "https://i.ytimg.com/vi/Zchu63bamKo/mqdefault.jpg",
-              "viewCount": 184780
-            },
-            {
-              "id": "v-muk5yn1s9nxdw-1",
-              "title": "일본인도 환장하는 와패니즈 흑인 【GTA 콩밥 특별시ㅣ스즈키 주짓수】",
-              "url": "https://www.youtube.com/watch?v=2QsXWMPqVbU",
-              "videoType": "clip",
-              "date": "2025.06.09",
-              "duration": "11:40",
-              "description": "",
-              "displayOrder": 1,
-              "thumbnailUrl": "https://i.ytimg.com/vi/2QsXWMPqVbU/mqdefault.jpg",
-              "viewCount": 112717
-            },
-            {
-              "id": "v-muk5yn1s575xi-2",
-              "title": "일본 메이드 카페 처음 와본 와패니즈 흑인 【GTA 콩밥 특별시ㅣ스즈키 주짓수】",
-              "url": "https://www.youtube.com/watch?v=o1ppJyhZk8c",
-              "videoType": "clip",
-              "date": "2025.06.16",
-              "duration": "10:46",
-              "description": "",
-              "displayOrder": 2,
-              "thumbnailUrl": "https://i.ytimg.com/vi/o1ppJyhZk8c/mqdefault.jpg",
-              "viewCount": 59851
-            },
-            {
-              "id": "v-muk5yz89ae0j",
-              "title": "'와패니즈 흑인 미국인 '스즈키 주짓수'' 【2025.05.28 / GTA 대형 서버 - 콩밥 특별시】",
-              "url": "https://www.youtube.com/watch?v=7i-8eBPnt9E&pp=0gcJCS8MAYcqIYzv",
-              "videoType": "full",
-              "date": "2025.07.05",
-              "duration": "2:18:47",
-              "description": "",
-              "displayOrder": 3,
-              "thumbnailUrl": "https://img.youtube.com/vi/7i-8eBPnt9E/hqdefault.jpg",
-              "viewCount": 1549
-            }
-          ],
+          "subscriberCount": "2,010명",
+          "youtubeUrl": "https://www.youtube.com/@Azusa_Aokawa",
+          "videos": [],
           "affiliations": [
             {
               "category": "citizen",
