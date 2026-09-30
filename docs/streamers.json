@@ -1,12 +1,12 @@
 {
   "appName": "kongbap-gta-rp",
   "version": "1.0",
-  "createdAt": "2026.09.29 23:46:24",
-  "reason": "구독자/팔로워 수 일괄 갱신 (성공 285명, 실패 0명, 기존 구독자 +19,992명(46명 상승), 신규 인원 5명(+114,082명))",
+  "createdAt": "2026.10.01 01:31:45",
+  "reason": "인원 수정: 주왁구옥주희 (쩡니예) - 소속 1개",
   "stats": {
     "totalCategories": 8,
     "totalMembers": 308,
-    "totalVideos": 2722,
+    "totalVideos": 2737,
     "totalLovelines": 3
   },
   "categories": [
@@ -46753,10 +46753,10 @@
           "swatRole": "",
           "status": "active",
           "badgeColor": "bg-purple-600",
-          "avatar": "assets/default-avatar.svg",
+          "avatar": "https://yt3.googleusercontent.com/ytc/AIdro_mU78mil100YGk_6HWjzU2BD_-wOvjiX3ugbpY4YH140w=s120-c-k-c0x00ffffff-no-rj",
           "displayOrder": 63,
           "subscriberCount": "",
-          "youtubeUrl": "",
+          "youtubeUrl": "https://www.youtube.com/@EWGF",
           "videos": [],
           "affiliations": [
             {
@@ -46780,11 +46780,156 @@
           "swatRole": "",
           "status": "active",
           "badgeColor": "bg-purple-600",
-          "avatar": "assets/default-avatar.svg",
+          "avatar": "https://yt3.googleusercontent.com/oysdQGF6qbYx6RUu2dRqTKj5WoNMpvtxwDNsr9o7F6Jfa5SXFf6m_MWK77kyYKrTTVgSy0Pj=s120-c-k-c0x00ffffff-no-rj",
           "displayOrder": 64,
           "subscriberCount": "",
-          "youtubeUrl": "",
-          "videos": [],
+          "youtubeUrl": "https://www.youtube.com/@송엘",
+          "videos": [
+            {
+              "id": "v-muo9vd091l0r2-0",
+              "title": "250601 방송 다시보기 뒤늦게 들어온 콩밥특별시 1일차",
+              "url": "https://www.youtube.com/watch?v=N8VvHtXlRMw",
+              "videoType": "full",
+              "date": "2025.06.11",
+              "duration": "6:00:04",
+              "viewCount": 120,
+              "thumbnailUrl": "https://i.ytimg.com/vi/N8VvHtXlRMw/mqdefault.jpg",
+              "description": "",
+              "displayOrder": 0
+            },
+            {
+              "id": "v-muo9vd09y506y-1",
+              "title": "250602 방송 다시보기 뒤늦게 들어온 콩밥특별시 2일차",
+              "url": "https://www.youtube.com/watch?v=rTsCgiVieEM",
+              "videoType": "full",
+              "date": "2025.06.11",
+              "duration": "10:58:08",
+              "viewCount": 74,
+              "thumbnailUrl": "https://i.ytimg.com/vi/rTsCgiVieEM/mqdefault.jpg",
+              "description": "",
+              "displayOrder": 1
+            },
+            {
+              "id": "v-muo9vd09irtfk-2",
+              "title": "250602 방송 다시보기 콩밥특별시 2일차",
+              "url": "https://www.youtube.com/watch?v=cJZLCrgVdHc",
+              "videoType": "full",
+              "date": "2025.06.11",
+              "duration": "52:46",
+              "viewCount": 24,
+              "thumbnailUrl": "https://i.ytimg.com/vi/cJZLCrgVdHc/mqdefault.jpg",
+              "description": "",
+              "displayOrder": 2
+            },
+            {
+              "id": "v-muo9vd097e7c3-3",
+              "title": "250603 방송 다시보기 뒤늦게온 콩밥특별시 3일차",
+              "url": "https://www.youtube.com/watch?v=6Fiai42HuAQ",
+              "videoType": "full",
+              "date": "2025.06.12",
+              "duration": "9:17:58",
+              "viewCount": 39,
+              "thumbnailUrl": "https://i.ytimg.com/vi/6Fiai42HuAQ/mqdefault.jpg",
+              "description": "",
+              "displayOrder": 3
+            },
+            {
+              "id": "v-muo9vd097g4db-4",
+              "title": "250605 방송 다시보기 콩밥특별시 5일차",
+              "url": "https://www.youtube.com/watch?v=mH1BitW2I_M",
+              "videoType": "full",
+              "date": "2025.06.12",
+              "duration": "9:30:02",
+              "viewCount": 44,
+              "thumbnailUrl": "https://i.ytimg.com/vi/mH1BitW2I_M/mqdefault.jpg",
+              "description": "",
+              "displayOrder": 4
+            },
+            {
+              "id": "v-muo9vd09zkm6c-5",
+              "title": "250604 방송 다시보기 뒤늦게온 콩밥특별시 4일차",
+              "url": "https://www.youtube.com/watch?v=7lrdiLRZdxw",
+              "videoType": "full",
+              "date": "2025.06.12",
+              "duration": "4:23:49",
+              "viewCount": 43,
+              "thumbnailUrl": "https://i.ytimg.com/vi/7lrdiLRZdxw/mqdefault.jpg",
+              "description": "",
+              "displayOrder": 5
+            },
+            {
+              "id": "v-muo9vd09rhnce-6",
+              "title": "250606 방송 다시보기 1부 마리오카트 월드 2부 뒤늦게 들어온 콩밥특별시 6일차",
+              "url": "https://www.youtube.com/watch?v=PdBOHs7GzEo",
+              "videoType": "full",
+              "date": "2025.06.18",
+              "duration": "6:00:04",
+              "viewCount": 34,
+              "thumbnailUrl": "https://i.ytimg.com/vi/PdBOHs7GzEo/mqdefault.jpg",
+              "description": "",
+              "displayOrder": 6
+            },
+            {
+              "id": "v-muo9vd09554wr-7",
+              "title": "250607 방송 다시보기 뒤늦게 들어온 콩밥특별시 6일차",
+              "url": "https://www.youtube.com/watch?v=_U8-tjRyfBk",
+              "videoType": "full",
+              "date": "2025.06.18",
+              "duration": "1:11:28",
+              "viewCount": 46,
+              "thumbnailUrl": "https://i.ytimg.com/vi/_U8-tjRyfBk/mqdefault.jpg",
+              "description": "",
+              "displayOrder": 7
+            },
+            {
+              "id": "v-muo9vd09bv9nh-8",
+              "title": "250607 방송 다시보기 1부 마리오카트월드 2부 뒤늦게 들어온 콩밥특별시 7일차",
+              "url": "https://www.youtube.com/watch?v=kg1Rt4LZ15w",
+              "videoType": "full",
+              "date": "2025.06.19",
+              "duration": "6:00:03",
+              "viewCount": 27,
+              "thumbnailUrl": "https://i.ytimg.com/vi/kg1Rt4LZ15w/mqdefault.jpg",
+              "description": "",
+              "displayOrder": 8
+            },
+            {
+              "id": "v-muo9vd09vvn0a-9",
+              "title": "250607 방송 다시보기 뒤늦게 들어온 콩밥특별시 7일차",
+              "url": "https://www.youtube.com/watch?v=D-M0P6aYC0g",
+              "videoType": "full",
+              "date": "2025.06.19",
+              "duration": "1:57:39",
+              "viewCount": 34,
+              "thumbnailUrl": "https://i.ytimg.com/vi/D-M0P6aYC0g/mqdefault.jpg",
+              "description": "",
+              "displayOrder": 9
+            },
+            {
+              "id": "v-muo9vd095gtyf-10",
+              "title": "250608 방송 다시보기 뒤늦게 들어온 콩밥특별시 마지막날 콘서트 구경",
+              "url": "https://www.youtube.com/watch?v=LDPD0I4EBqs",
+              "videoType": "full",
+              "date": "2025.06.19",
+              "duration": "2:00:00",
+              "viewCount": 57,
+              "thumbnailUrl": "https://i.ytimg.com/vi/LDPD0I4EBqs/mqdefault.jpg",
+              "description": "",
+              "displayOrder": 10
+            },
+            {
+              "id": "v-muo9vd09j4v1d-11",
+              "title": "250608 방송 다시보기 뒤늦게 들어온 콩밥특별시 마지막날",
+              "url": "https://www.youtube.com/watch?v=s9VzvwS0_MY",
+              "videoType": "full",
+              "date": "2025.06.19",
+              "duration": "6:00:02",
+              "viewCount": 70,
+              "thumbnailUrl": "https://i.ytimg.com/vi/s9VzvwS0_MY/mqdefault.jpg",
+              "description": "",
+              "displayOrder": 11
+            }
+          ],
           "affiliations": [
             {
               "category": "citizen",
@@ -46807,10 +46952,10 @@
           "swatRole": "",
           "status": "active",
           "badgeColor": "bg-purple-600",
-          "avatar": "assets/default-avatar.svg",
+          "avatar": "https://yt3.googleusercontent.com/48O-JAy3M82VBmIRTolQwOsc8WtF3zfpmYkVwFWTnzoF-ytInSL41w6PVUv4MU84blQNu-HIxOM=s120-c-k-c0x00ffffff-no-rj",
           "displayOrder": 65,
           "subscriberCount": "",
-          "youtubeUrl": "",
+          "youtubeUrl": "https://www.youtube.com/@송찐빵",
           "videos": [],
           "affiliations": [
             {
@@ -46834,11 +46979,24 @@
           "swatRole": "",
           "status": "active",
           "badgeColor": "bg-purple-600",
-          "avatar": "assets/default-avatar.svg",
+          "avatar": "https://yt3.googleusercontent.com/jz7NJBxIJHtJ6_Tj6t84wwIQudyXf726a0OXXlXxa9edZqm2RXsXARbMijc68yoI-eC4uUVM4B4=s120-c-k-c0x00ffffff-no-rj",
           "displayOrder": 66,
           "subscriberCount": "",
-          "youtubeUrl": "",
-          "videos": [],
+          "youtubeUrl": "https://www.youtube.com/@overwatchEsports",
+          "videos": [
+            {
+              "id": "v-muoaeb8n1lbq",
+              "title": "아이치 종합게임 모음 6월호ㅣ콩밥특별시, REPO, 졸트, 마카월",
+              "url": "https://www.youtube.com/watch?v=2hyZeE1YCK8&t=527s",
+              "videoType": "clip",
+              "date": "2025.06.28",
+              "duration": "29:51",
+              "viewCount": 29971,
+              "description": "",
+              "displayOrder": 0,
+              "thumbnailUrl": "https://img.youtube.com/vi/2hyZeE1YCK8/hqdefault.jpg"
+            }
+          ],
           "affiliations": [
             {
               "category": "citizen",
@@ -46861,11 +47019,24 @@
           "swatRole": "",
           "status": "active",
           "badgeColor": "bg-purple-600",
-          "avatar": "assets/default-avatar.svg",
+          "avatar": "https://yt3.googleusercontent.com/sVAPM-T1NIuNRTvgush5nY7l88QGPrhMJbCUIeIP7KqHO7w7u-riB5MIDvXjU4towKLhwWH9=s160-c-k-c0x00ffffff-no-rj",
           "displayOrder": 67,
           "subscriberCount": "",
-          "youtubeUrl": "",
-          "videos": [],
+          "youtubeUrl": "https://www.youtube.com/@오락실이오",
+          "videos": [
+            {
+              "id": "v-muoahtnze7oq",
+              "title": "[콩밥특별시] 안산맨한테 맞고 나홀로 콩밥특별시",
+              "url": "https://youtu.be/j9ZyRoedPTM?list=PLse1iLc5Bfbf_gb89zqVPHz-LacX0qI_U",
+              "videoType": "full",
+              "date": "2025.06.13",
+              "duration": "1:34:52",
+              "viewCount": 183,
+              "description": "",
+              "displayOrder": 0,
+              "thumbnailUrl": "https://img.youtube.com/vi/j9ZyRoedPTM/hqdefault.jpg"
+            }
+          ],
           "affiliations": [
             {
               "category": "citizen",
@@ -46888,11 +47059,24 @@
           "swatRole": "",
           "status": "active",
           "badgeColor": "bg-purple-600",
-          "avatar": "assets/default-avatar.svg",
+          "avatar": "https://yt3.googleusercontent.com/0C8KW7rb7TJV5uowbkcqHC5nfyiwS443JnJXbK1Xn5Lu_Mx267QKMGqZ1J7kbriZTt0dYp5_W1c=s120-c-k-c0x00ffffff-no-rj",
           "displayOrder": 68,
           "subscriberCount": "",
-          "youtubeUrl": "",
-          "videos": [],
+          "youtubeUrl": "https://www.youtube.com/@일루전",
+          "videos": [
+            {
+              "id": "v-muob5pypmfpm",
+              "title": "초대형 스트리머 서버에서 게이로 박제되었습니다...앞으로 저 진짜 어떡하죠? | 콩밥특별시",
+              "url": "https://www.youtube.com/watch?v=VhjhHU45W7g",
+              "videoType": "clip",
+              "date": "2025.06.30",
+              "duration": "39:39",
+              "viewCount": 27143,
+              "description": "",
+              "displayOrder": 0,
+              "thumbnailUrl": "https://img.youtube.com/vi/VhjhHU45W7g/hqdefault.jpg"
+            }
+          ],
           "affiliations": [
             {
               "category": "citizen",
@@ -46915,10 +47099,10 @@
           "swatRole": "",
           "status": "active",
           "badgeColor": "bg-purple-600",
-          "avatar": "assets/default-avatar.svg",
+          "avatar": "https://yt3.googleusercontent.com/bXINamlUEdM0Bosrbet4b0KB09XGAlmHCsIbik8-vvrpuihpC0R_-D35lWRojEKEFtYjeZOj=s120-c-k-c0x00ffffff-no-rj",
           "displayOrder": 69,
           "subscriberCount": "",
-          "youtubeUrl": "",
+          "youtubeUrl": "https://www.youtube.com/@쩡니예",
           "videos": [],
           "affiliations": [
             {
