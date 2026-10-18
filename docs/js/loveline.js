@@ -698,7 +698,7 @@ function renderLovelineModal() {
   if (!modal) return;
 
   modal.innerHTML = `
-    <div class="bg-zinc-900 border border-zinc-800 rounded-3xl w-full max-w-4xl max-h-[92vh] overflow-y-auto shadow-2xl p-4 sm:p-6 md:p-7 flex flex-col" onclick="event.stopPropagation()">
+    <div class="bg-zinc-900 border border-zinc-800 rounded-3xl w-full max-w-5xl max-h-[92vh] overflow-y-auto shadow-2xl p-4 sm:p-6 md:p-7 flex flex-col" style="scrollbar-gutter: stable;" onclick="event.stopPropagation()">
       <!-- 모달 헤더 -->
       <div class="flex items-center justify-between pb-3.5 border-b border-zinc-800 mb-4">
         <div class="flex items-center gap-2.5">
@@ -723,20 +723,20 @@ function renderLovelineModal() {
         </button>
       </div>
 
-      <!-- 메인 3단 스테이지 (왼쪽 사람선택 | 관계 선택 | 오른쪽 사람선택) -->
-      <div class="grid grid-cols-1 lg:grid-cols-[1fr_220px_1fr] gap-3 sm:gap-4 items-stretch my-2">
+      <!-- 메인 3단 스테이지 (왼쪽 사람선택 | 관계 선택 | 오른쪽 사람선택 - 완전 대칭 1:1 보장) -->
+      <div class="grid grid-cols-1 md:grid-cols-[minmax(0,1fr)_200px_minmax(0,1fr)] gap-3 sm:gap-4 items-stretch my-2">
         <!-- 1. 왼쪽 사람 선택 -->
-        <div id="modal-person-container-1" class="flex flex-col h-full">
+        <div id="modal-person-container-1" class="flex flex-col h-full min-w-0">
           ${renderModalPersonBox(1, lovelineModalP1)}
         </div>
 
         <!-- 2. 중앙 관계 & 하트 선택 -->
-        <div id="modal-relation-container" class="flex flex-col h-full">
+        <div id="modal-relation-container" class="flex flex-col h-full min-w-0">
           ${renderModalRelationBox()}
         </div>
 
         <!-- 3. 오른쪽 사람 선택 -->
-        <div id="modal-person-container-2" class="flex flex-col h-full">
+        <div id="modal-person-container-2" class="flex flex-col h-full min-w-0">
           ${renderModalPersonBox(2, lovelineModalP2)}
         </div>
       </div>
@@ -778,7 +778,7 @@ function renderModalPersonBox(targetNum, person) {
   if (person) {
     const avatar = person.avatar || "assets/default-avatar.svg";
     return `
-      <div class="flex-1 flex flex-col justify-between p-4 sm:p-5 rounded-2xl bg-zinc-950/80 border border-pink-500/40 relative shadow-inner group">
+      <div class="flex-1 flex flex-col justify-between p-4 sm:p-5 rounded-2xl bg-zinc-950/80 border border-pink-500/40 relative shadow-inner group min-w-0">
         <div class="flex items-center justify-between pb-2.5 border-b border-zinc-800/60 mb-2">
           <span class="text-xs font-bold text-pink-400 flex items-center gap-1">
             <span>${arrow}</span>
@@ -823,7 +823,7 @@ function renderModalPersonBox(targetNum, person) {
 
   // 미선택 상태: 검색창 및 실시간 결과 목록
   return `
-    <div class="flex-1 flex flex-col p-3.5 sm:p-4 rounded-2xl bg-zinc-950/80 border border-zinc-800/90 shadow-inner">
+    <div class="flex-1 flex flex-col p-3.5 sm:p-4 rounded-2xl bg-zinc-950/80 border border-zinc-800/90 shadow-inner min-w-0">
       <div class="flex items-center justify-between mb-2 pb-2 border-b border-zinc-800/60">
         <span class="text-xs font-bold text-pink-400 flex items-center gap-1">
           <span>${arrow}</span>
@@ -847,7 +847,8 @@ function renderModalPersonBox(targetNum, person) {
       <!-- 검색 결과 스크롤 목록 -->
       <div 
         id="modal-search-results-${targetNum}" 
-        class="flex-1 max-h-56 sm:max-h-64 overflow-y-auto space-y-1.5 custom-scrollbar pr-1"
+        class="flex-1 max-h-56 sm:max-h-64 overflow-y-auto space-y-1.5 custom-scrollbar pr-1 select-text"
+        style="scrollbar-gutter: stable;"
       >
         ${renderModalSearchResultsHtml(targetNum, "")}
       </div>
@@ -879,7 +880,7 @@ function renderModalSearchResultsHtml(targetNum, query = "") {
     <button 
       type="button" 
       onclick="selectModalMember(${targetNum}, '${escapeHtml(m.id)}')"
-      class="w-full flex items-center gap-2.5 p-2 rounded-xl bg-zinc-900/70 hover:bg-pink-950/30 border border-zinc-800/80 hover:border-pink-500/50 transition-all text-left cursor-pointer group"
+      class="w-full flex items-center gap-2.5 p-2 rounded-xl bg-zinc-900/70 hover:bg-pink-950/30 border border-zinc-800/80 hover:border-pink-500/50 transition-all text-left cursor-pointer group min-w-0"
     >
       <img 
         src="${escapeHtml(m.avatar || 'assets/default-avatar.svg')}" 
@@ -954,12 +955,20 @@ function renderModalRelationBox() {
   const emojis = ['💍', '💖', '💌'];
 
   return `
-    <div class="flex-1 flex flex-col justify-between p-4 rounded-2xl bg-zinc-950/80 border border-pink-500/30 space-y-3.5 shadow-inner">
-      <div class="text-center pb-2 border-b border-zinc-800/60">
+    <div class="flex-1 flex flex-col justify-between p-4 rounded-2xl bg-zinc-950/80 border border-pink-500/30 space-y-3.5 shadow-inner min-w-0">
+      <div class="text-center pb-2 border-b border-zinc-800/60 relative flex items-center justify-center">
         <span class="text-xs font-bold text-pink-400 flex items-center justify-center gap-1">
           <span>💖</span>
           <span>관계 및 아이콘</span>
         </span>
+        <button 
+          type="button" 
+          onclick="swapModalMembers()" 
+          title="좌우 인원 위치 교체" 
+          class="absolute right-0 text-[11px] px-1.5 py-0.5 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-zinc-300 hover:text-white transition-colors cursor-pointer border border-zinc-700/60"
+        >
+          ⇄
+        </button>
       </div>
 
       <!-- 하트 프리뷰 -->
