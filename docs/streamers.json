@@ -1,13 +1,13 @@
 {
   "appName": "kongbap-gta-rp",
   "version": "1.0",
-  "createdAt": "2026.10.18 08:46:26",
-  "reason": "러브라인 순서 변경: 김폭설 / 김폭염 💕 김세빈 (1번 → 3번)",
+  "createdAt": "2026.10.23 07:16:25",
+  "reason": "러브라인 추가: 정철중 💕 김다미",
   "stats": {
     "totalCategories": 8,
     "totalMembers": 308,
     "totalVideos": 2745,
-    "totalLovelines": 4
+    "totalLovelines": 18
   },
   "categories": [
     {
@@ -48197,6 +48197,116 @@
       "members": [],
       "lovelines": [
         {
+          "id": "love-1792707385314",
+          "status": "결혼",
+          "statusType": "married",
+          "heartEmoji": "💍",
+          "person1": {
+            "name": "정철중",
+            "streamer": "앵보",
+            "badge": "👮‍♂️ 경찰",
+            "badgeColor": "bg-blue-950/80 text-blue-300 border-blue-700/50",
+            "avatar": "https://yt3.googleusercontent.com/JK0pnF78dis0aTOFH0IqJxCrR62nF4LNhy5SXCFavwpVWu5sMv48Op6pYNeTU-Hz4SkB4oI1=s120-c-k-c0x00ffffff-no-rj",
+            "memberId": "pol-40"
+          },
+          "person2": {
+            "name": "김다미",
+            "streamer": "새담",
+            "badge": "👮‍♂️ 경찰",
+            "badgeColor": "bg-blue-950/80 text-blue-300 border-blue-700/50",
+            "avatar": "https://yt3.googleusercontent.com/Cq9M4hdDohc0kyJIz_Jm5JnsJlSU0C-oEzV84d_W7E40PnqlUrihro-vnw-zyzcBs4ptfRy3=s120-c-k-c0x00ffffff-no-rj",
+            "memberId": "pol-32"
+          }
+        },
+        {
+          "id": "love-1792707363550",
+          "status": "결혼",
+          "statusType": "married",
+          "heartEmoji": "💍",
+          "person1": {
+            "name": "정상화",
+            "streamer": "명예훈장",
+            "badge": "👮‍♂️ 경찰",
+            "badgeColor": "bg-blue-950/80 text-blue-300 border-blue-700/50",
+            "avatar": "https://yt3.googleusercontent.com/ytc/AIdro_kJLN8HM044uke9HxMu28KtBeLo8MypPzto785rjTdoAqo=s120-c-k-c0x00ffffff-no-rj",
+            "memberId": "pol-13"
+          },
+          "person2": {
+            "name": "레드중위",
+            "streamer": "레드",
+            "badge": "🚑 EMS",
+            "badgeColor": "bg-teal-950/80 text-teal-300 border-teal-700/50",
+            "avatar": "https://yt3.googleusercontent.com/lSDmTKPVriZ3lf7rfXMT34vwH-OVqXD7mpM_PTlGGKImKW7ELVWgKSdmxX9r5Z9Z1OT38Ei9hA=s120-c-k-c0x00ffffff-no-rj",
+            "memberId": "ems-5"
+          }
+        },
+        {
+          "id": "love-1792707093226",
+          "status": "결혼",
+          "statusType": "married",
+          "heartEmoji": "💍",
+          "person1": {
+            "name": "마카오박",
+            "streamer": "위버멘쉬 너구리",
+            "badge": "💀 깨갱",
+            "badgeColor": "bg-red-950/80 text-red-300 border-red-700/50",
+            "avatar": "https://yt3.googleusercontent.com/ZxbglBdKPGhXtkO3x8XXmo_96FLcVcZ4Q5rbHYRLO-ZkVzztzYcRwAW1ZhgewHybq4ZzgINeOg=s160-c-k-c0x00ffffff-no-rj",
+            "memberId": "gang-kgaeng-14"
+          },
+          "person2": {
+            "name": "김나비",
+            "streamer": "김앵고",
+            "badge": "🏢 KOI 레스토랑",
+            "badgeColor": "bg-amber-950/80 text-amber-300 border-amber-700/50",
+            "avatar": "https://yt3.googleusercontent.com/Zgmj3BDtKLRvhJfVjPEqr3Yjoldtkkj0VYSzZlVyho-ILYoTTkbX4s0sJRyMGcIRJXlHytFv=s160-c-k-c0x00ffffff-no-rj",
+            "memberId": "biz-koi-4"
+          }
+        },
+        {
+          "id": "love-1792707026182",
+          "status": "결혼",
+          "statusType": "married",
+          "heartEmoji": "💍",
+          "person1": {
+            "name": "노채무",
+            "streamer": "애플",
+            "badge": "🏢 야스테이션",
+            "badgeColor": "bg-amber-950/80 text-amber-300 border-amber-700/50",
+            "avatar": "https://yt3.googleusercontent.com/FPhTgI6dbbxVCMhAcO6WGL-cjIrpP1kJlfWuJ1LqF2ZgZl4lE3zbYWrJoIKS61f3wWF_H3H4=s160-c-k-c0x00ffffff-no-rj",
+            "memberId": "biz-yastation-4"
+          },
+          "person2": {
+            "name": "뭘로해",
+            "streamer": "토다기",
+            "badge": "💀 움파룸파",
+            "badgeColor": "bg-red-950/80 text-red-300 border-red-700/50",
+            "avatar": "https://yt3.googleusercontent.com/xLR3Fp1dgl2AwkZN41FOKNw7JFvTi6QMQr4yGn3XTUGenvOhzRB1eOtaqzhSqlyLrATnaBCfsVc=s120-c-k-c0x00ffffff-no-rj",
+            "memberId": "gang-oompa-10"
+          }
+        },
+        {
+          "id": "love-1792706831312",
+          "status": "결혼",
+          "statusType": "married",
+          "heartEmoji": "💍",
+          "person1": {
+            "name": "엄현자",
+            "streamer": "콩천",
+            "badge": "👮‍♂️ 경찰",
+            "badgeColor": "bg-blue-950/80 text-blue-300 border-blue-700/50",
+            "avatar": "https://yt3.googleusercontent.com/Aa8sLSJUqvURmzmXGz80tKX3WL4RdwGuRUphvyJo-x51iuJKI-UC7sdvFeE-DBC9J5JLlz_kIw=s120-c-k-c0x00ffffff-no-rj",
+            "memberId": "pol-34"
+          },
+          "person2": {
+            "name": "뵤순경",
+            "streamer": "뵤오",
+            "badge": "👮‍♂️ 경찰",
+            "badgeColor": "bg-blue-950/80 text-blue-300 border-blue-700/50",
+            "avatar": "https://yt3.googleusercontent.com/P1NJd_a6v4oYCxCrqPhtxEy3h1BvtKbHejuGjzJBkTwQpGW87hgbY_GMi9sSzg7tLe3JFqqYag=s120-c-k-c0x00ffffff-no-rj",
+            "memberId": "pol-23"
+          }
+        },
+        {
           "id": "love-1789852315158",
           "status": "결혼",
           "statusType": "married",
@@ -48241,6 +48351,160 @@
           }
         },
         {
+          "id": "love-1792707180205",
+          "status": "연애",
+          "statusType": "dating",
+          "heartEmoji": "💖",
+          "person1": {
+            "name": "이재완",
+            "streamer": "울프",
+            "badge": "💀 농협",
+            "badgeColor": "bg-red-950/80 text-red-300 border-red-700/50",
+            "avatar": "https://yt3.googleusercontent.com/ytc/AIdro_nKgSX8sdXfkhKZ1crVdTpswBXEokISd3qR_bM1YumfleE=s160-c-k-c0x00ffffff-no-rj",
+            "memberId": "gang-nonghyup-4"
+          },
+          "person2": {
+            "name": "미저리",
+            "streamer": "밑줄",
+            "badge": "💀 금속노조",
+            "badgeColor": "bg-red-950/80 text-red-300 border-red-700/50",
+            "avatar": "https://yt3.googleusercontent.com/D0dMOVLAkk-V4OUb0bMRydgfXnSqnKVRH_OeRjB3a7r7pvJ9EefLxgeZzOc3wnSTI6pXi1ik=s160-c-k-c0x00ffffff-no-rj",
+            "memberId": "gang-metalunion-2"
+          }
+        },
+        {
+          "id": "love-1792707139946",
+          "status": "연애",
+          "statusType": "dating",
+          "heartEmoji": "💖",
+          "person1": {
+            "name": "부정미",
+            "streamer": "하루나비",
+            "badge": "🚑 EMS",
+            "badgeColor": "bg-teal-950/80 text-teal-300 border-teal-700/50",
+            "avatar": "https://yt3.googleusercontent.com/9L1ZvBWxyo5U8nD_AEbKlXfuJx_OlUmagQiZGu3_73Hit7KZwN3IwxST3FljJlsv1xaYJIzV2A=s120-c-k-c0x00ffffff-no-rj",
+            "memberId": "ems-3"
+          },
+          "person2": {
+            "name": "단백질소나타",
+            "streamer": "연주하는곰탱",
+            "badge": "👮‍♂️ 경찰",
+            "badgeColor": "bg-blue-950/80 text-blue-300 border-blue-700/50",
+            "avatar": "https://yt3.googleusercontent.com/hiMWvBNi5f-TjgqbkT3G8ngSexVTLZMcbARt2S8lDvoFv0KfRZoWpWDfb6fTbDEsrhq9arBC=s120-c-k-c0x00ffffff-no-rj",
+            "memberId": "pol-33"
+          }
+        },
+        {
+          "id": "love-1792706996525",
+          "status": "연애",
+          "statusType": "dating",
+          "heartEmoji": "💖",
+          "person1": {
+            "name": "난는노숙자",
+            "streamer": "강지형",
+            "badge": "💀 움파룸파",
+            "badgeColor": "bg-red-950/80 text-red-300 border-red-700/50",
+            "avatar": "https://yt3.googleusercontent.com/ytc/AIdro_lbpfOC9I8qLiOVcpkqVGISdiSIIKblr7zkprr7zVhB1cV6PVM=s120-c-k-c0x00ffffff-no-rj",
+            "memberId": "gang-oompa-8"
+          },
+          "person2": {
+            "name": "클랑말랑5세",
+            "streamer": "김오니",
+            "badge": "🏢 KOI 레스토랑",
+            "badgeColor": "bg-amber-950/80 text-amber-300 border-amber-700/50",
+            "avatar": "https://yt3.googleusercontent.com/rT9jDdHJmFIw-QUgZYfJS3DLPp0CF4u_RS9cd72oRqGnNk2_0HVP4RPlATvn5Z3h8i3o00TI=s160-c-k-c0x00ffffff-no-rj",
+            "memberId": "biz-koi-2"
+          }
+        },
+        {
+          "id": "love-1792706879861",
+          "status": "연애",
+          "statusType": "dating",
+          "heartEmoji": "💖",
+          "person1": {
+            "name": "쫑스틴",
+            "streamer": "쫑민",
+            "badge": "💀 움파룸파",
+            "badgeColor": "bg-red-950/80 text-red-300 border-red-700/50",
+            "avatar": "https://yt3.googleusercontent.com/_shRbMzpRA5CxuHg-aEUZP24IejR-2KWOyCe8SucDjEKAK1tL8D1pYZCV4FiJANZwGEsw9R2=s120-c-k-c0x00ffffff-no-rj",
+            "memberId": "gang-oompa-4"
+          },
+          "person2": {
+            "name": "김노션",
+            "streamer": "로션욤",
+            "badge": "🚑 EMS",
+            "badgeColor": "bg-teal-950/80 text-teal-300 border-teal-700/50",
+            "avatar": "https://yt3.googleusercontent.com/qOnI5Sqr5MHqsJ7jZNSjSDc8fdkDYc8HOJGn1PejIYJrsC9uZvgswN1fjoek1HTy5gAE5K4kIlw=s120-c-k-c0x00ffffff-no-rj",
+            "memberId": "gang-oompa-9"
+          }
+        },
+        {
+          "id": "love-1792706855441",
+          "status": "연애",
+          "statusType": "dating",
+          "heartEmoji": "💖",
+          "person1": {
+            "name": "장지환 / 장두광 / 거지환",
+            "streamer": "괴물쥐",
+            "badge": "💀 빅딕",
+            "badgeColor": "bg-red-950/80 text-red-300 border-red-700/50",
+            "avatar": "https://yt3.googleusercontent.com/ytc/AIdro_n2j3w7B8DpULUI9Z-GIFO2HVj487vk_hKU9Epsab-Q6qo=s120-c-k-c0x00ffffff-no-rj",
+            "memberId": "gang-bd-1"
+          },
+          "person2": {
+            "name": "민해리",
+            "streamer": "민네",
+            "badge": "💀 빅딕",
+            "badgeColor": "bg-red-950/80 text-red-300 border-red-700/50",
+            "avatar": "https://yt3.googleusercontent.com/d0cluRmRok5B-zJJyfUmMVGoKyViIQ_RKBtNe0D4UjBB2kVblUJh1j9DbSoZBoECDeAXayCE=s160-c-k-c0x00ffffff-no-rj",
+            "memberId": "gang-bd-7"
+          }
+        },
+        {
+          "id": "love-1792706750755",
+          "status": "연애",
+          "statusType": "dating",
+          "heartEmoji": "💖",
+          "person1": {
+            "name": "레스",
+            "streamer": "레스",
+            "badge": "👮‍♂️ 경찰",
+            "badgeColor": "bg-blue-950/80 text-blue-300 border-blue-700/50",
+            "avatar": "https://yt3.googleusercontent.com/dgb7xWejv0czVQ_3_NS6AZ-8NdlY1d4LP8-gx-Vs5ahLW4pr8Rrqg6r2w7T3K94rzCgLrgYs=s120-c-k-c0x00ffffff-no-rj",
+            "memberId": "pol-5"
+          },
+          "person2": {
+            "name": "나비리",
+            "streamer": "나나양",
+            "badge": "👮‍♂️ 경찰",
+            "badgeColor": "bg-blue-950/80 text-blue-300 border-blue-700/50",
+            "avatar": "https://yt3.googleusercontent.com/e0O5JPO_TyYnSF3R_9GfbIlJtg09Bevwe684xfHQcGIVjy36F8PjY2V7qDi_15oVMEWt-3M4FQ=s120-c-k-c0x00ffffff-no-rj",
+            "memberId": "pol-11"
+          }
+        },
+        {
+          "id": "love-1792605596724",
+          "status": "연애",
+          "statusType": "dating",
+          "heartEmoji": "💖",
+          "person1": {
+            "name": "김윤성",
+            "streamer": "김뿡",
+            "badge": "👮‍♂️ 경찰",
+            "badgeColor": "bg-blue-950/80 text-blue-300 border-blue-700/50",
+            "avatar": "https://yt3.googleusercontent.com/94T3kUaZym2JnMAQcyj7VxnZxSV4lHileaNoGoCOvvhl9QeNI6MEqK3DOllUXscLZm-AezxB=s120-c-k-c0x00ffffff-no-rj",
+            "memberId": "m-mtxvjb7wxx12"
+          },
+          "person2": {
+            "name": "나견차",
+            "streamer": "쿠레나이 나츠키",
+            "badge": "👮‍♂️ 경찰",
+            "badgeColor": "bg-blue-950/80 text-blue-300 border-blue-700/50",
+            "avatar": "https://yt3.googleusercontent.com/MVeDjBIWGRoK1MGRC7Ub-JDKFYeFHSD1miNLVgL6sF4bhmAnIOtTdpWXPrdDzUmjCl6QGS0u=s120-c-k-c0x00ffffff-no-rj",
+            "memberId": "pol-17"
+          }
+        },
+        {
           "id": "love-1792280779751",
           "status": "연애",
           "statusType": "dating",
@@ -48260,6 +48524,50 @@
             "badgeColor": "bg-blue-950/80 text-blue-300 border-blue-700/50",
             "avatar": "https://yt3.googleusercontent.com/rOwC2OiUYJ090jRthBByx3KITeHQtu0zkLwdWl1QptuOp6y6G1w2cbaSaDLB0zQmCVaJVj4Z5A=s120-c-k-c0x00ffffff-no-rj",
             "memberId": "pol-7"
+          }
+        },
+        {
+          "id": "love-1792707061281",
+          "status": "썸",
+          "statusType": "some",
+          "heartEmoji": "💌",
+          "person1": {
+            "name": "동정호",
+            "streamer": "정령왕",
+            "badge": "💀 GIRL BANG",
+            "badgeColor": "bg-red-950/80 text-red-300 border-red-700/50",
+            "avatar": "https://yt3.googleusercontent.com/IjWmZMb6C6xN1G8fkvN4lUl7wk2ElrTm_WTICqBCrw4VnYoQrc8o5vz9IDmOJYlcrw9YEN6CJQ=s160-c-k-c0x00ffffff-no-rj",
+            "memberId": "gang-girlbang-3"
+          },
+          "person2": {
+            "name": "맹숙희",
+            "streamer": "맹숙",
+            "badge": "👮‍♂️ 경찰",
+            "badgeColor": "bg-blue-950/80 text-blue-300 border-blue-700/50",
+            "avatar": "https://yt3.googleusercontent.com/mYaeB0KgIeYcGJ2-7GYRcUi8PaJ8MkwtIBtwWGDOETe4K24_9rYas8P5wWWe4WeAS_0vpHg4VA=s120-c-k-c0x00ffffff-no-rj",
+            "memberId": "pol-22"
+          }
+        },
+        {
+          "id": "love-1792706910246",
+          "status": "썸",
+          "statusType": "some",
+          "heartEmoji": "💌",
+          "person1": {
+            "name": "강 / 강반장 / 강전규 / 김사복",
+            "streamer": "사모장",
+            "badge": "👮‍♂️ 경찰",
+            "badgeColor": "bg-blue-950/80 text-blue-300 border-blue-700/50",
+            "avatar": "https://yt3.googleusercontent.com/ytc/AIdro_kKQL_mji2zdTvWwmVD8zw_KW-oWfvb6ilq74PxZS9trIk=s120-c-k-c0x00ffffff-no-rj",
+            "memberId": "pol-4"
+          },
+          "person2": {
+            "name": "야가다 코푸",
+            "streamer": "이글콥",
+            "badge": "🏢 야스테이션",
+            "badgeColor": "bg-amber-950/80 text-amber-300 border-amber-700/50",
+            "avatar": "https://yt3.googleusercontent.com/Jb8Vzmg-P-RohR0GfSxQHCKlPxzQMcwxb-NjAydlovVPVev3UgSIF2z_246tjwUTcYFZK5iWNiA=s160-c-k-c0x00ffffff-no-rj",
+            "memberId": "biz-yastation-1"
           }
         },
         {
@@ -48288,6 +48596,116 @@
     }
   ],
   "lovelines": [
+    {
+      "id": "love-1792707385314",
+      "status": "결혼",
+      "statusType": "married",
+      "heartEmoji": "💍",
+      "person1": {
+        "name": "정철중",
+        "streamer": "앵보",
+        "badge": "👮‍♂️ 경찰",
+        "badgeColor": "bg-blue-950/80 text-blue-300 border-blue-700/50",
+        "avatar": "https://yt3.googleusercontent.com/JK0pnF78dis0aTOFH0IqJxCrR62nF4LNhy5SXCFavwpVWu5sMv48Op6pYNeTU-Hz4SkB4oI1=s120-c-k-c0x00ffffff-no-rj",
+        "memberId": "pol-40"
+      },
+      "person2": {
+        "name": "김다미",
+        "streamer": "새담",
+        "badge": "👮‍♂️ 경찰",
+        "badgeColor": "bg-blue-950/80 text-blue-300 border-blue-700/50",
+        "avatar": "https://yt3.googleusercontent.com/Cq9M4hdDohc0kyJIz_Jm5JnsJlSU0C-oEzV84d_W7E40PnqlUrihro-vnw-zyzcBs4ptfRy3=s120-c-k-c0x00ffffff-no-rj",
+        "memberId": "pol-32"
+      }
+    },
+    {
+      "id": "love-1792707363550",
+      "status": "결혼",
+      "statusType": "married",
+      "heartEmoji": "💍",
+      "person1": {
+        "name": "정상화",
+        "streamer": "명예훈장",
+        "badge": "👮‍♂️ 경찰",
+        "badgeColor": "bg-blue-950/80 text-blue-300 border-blue-700/50",
+        "avatar": "https://yt3.googleusercontent.com/ytc/AIdro_kJLN8HM044uke9HxMu28KtBeLo8MypPzto785rjTdoAqo=s120-c-k-c0x00ffffff-no-rj",
+        "memberId": "pol-13"
+      },
+      "person2": {
+        "name": "레드중위",
+        "streamer": "레드",
+        "badge": "🚑 EMS",
+        "badgeColor": "bg-teal-950/80 text-teal-300 border-teal-700/50",
+        "avatar": "https://yt3.googleusercontent.com/lSDmTKPVriZ3lf7rfXMT34vwH-OVqXD7mpM_PTlGGKImKW7ELVWgKSdmxX9r5Z9Z1OT38Ei9hA=s120-c-k-c0x00ffffff-no-rj",
+        "memberId": "ems-5"
+      }
+    },
+    {
+      "id": "love-1792707093226",
+      "status": "결혼",
+      "statusType": "married",
+      "heartEmoji": "💍",
+      "person1": {
+        "name": "마카오박",
+        "streamer": "위버멘쉬 너구리",
+        "badge": "💀 깨갱",
+        "badgeColor": "bg-red-950/80 text-red-300 border-red-700/50",
+        "avatar": "https://yt3.googleusercontent.com/ZxbglBdKPGhXtkO3x8XXmo_96FLcVcZ4Q5rbHYRLO-ZkVzztzYcRwAW1ZhgewHybq4ZzgINeOg=s160-c-k-c0x00ffffff-no-rj",
+        "memberId": "gang-kgaeng-14"
+      },
+      "person2": {
+        "name": "김나비",
+        "streamer": "김앵고",
+        "badge": "🏢 KOI 레스토랑",
+        "badgeColor": "bg-amber-950/80 text-amber-300 border-amber-700/50",
+        "avatar": "https://yt3.googleusercontent.com/Zgmj3BDtKLRvhJfVjPEqr3Yjoldtkkj0VYSzZlVyho-ILYoTTkbX4s0sJRyMGcIRJXlHytFv=s160-c-k-c0x00ffffff-no-rj",
+        "memberId": "biz-koi-4"
+      }
+    },
+    {
+      "id": "love-1792707026182",
+      "status": "결혼",
+      "statusType": "married",
+      "heartEmoji": "💍",
+      "person1": {
+        "name": "노채무",
+        "streamer": "애플",
+        "badge": "🏢 야스테이션",
+        "badgeColor": "bg-amber-950/80 text-amber-300 border-amber-700/50",
+        "avatar": "https://yt3.googleusercontent.com/FPhTgI6dbbxVCMhAcO6WGL-cjIrpP1kJlfWuJ1LqF2ZgZl4lE3zbYWrJoIKS61f3wWF_H3H4=s160-c-k-c0x00ffffff-no-rj",
+        "memberId": "biz-yastation-4"
+      },
+      "person2": {
+        "name": "뭘로해",
+        "streamer": "토다기",
+        "badge": "💀 움파룸파",
+        "badgeColor": "bg-red-950/80 text-red-300 border-red-700/50",
+        "avatar": "https://yt3.googleusercontent.com/xLR3Fp1dgl2AwkZN41FOKNw7JFvTi6QMQr4yGn3XTUGenvOhzRB1eOtaqzhSqlyLrATnaBCfsVc=s120-c-k-c0x00ffffff-no-rj",
+        "memberId": "gang-oompa-10"
+      }
+    },
+    {
+      "id": "love-1792706831312",
+      "status": "결혼",
+      "statusType": "married",
+      "heartEmoji": "💍",
+      "person1": {
+        "name": "엄현자",
+        "streamer": "콩천",
+        "badge": "👮‍♂️ 경찰",
+        "badgeColor": "bg-blue-950/80 text-blue-300 border-blue-700/50",
+        "avatar": "https://yt3.googleusercontent.com/Aa8sLSJUqvURmzmXGz80tKX3WL4RdwGuRUphvyJo-x51iuJKI-UC7sdvFeE-DBC9J5JLlz_kIw=s120-c-k-c0x00ffffff-no-rj",
+        "memberId": "pol-34"
+      },
+      "person2": {
+        "name": "뵤순경",
+        "streamer": "뵤오",
+        "badge": "👮‍♂️ 경찰",
+        "badgeColor": "bg-blue-950/80 text-blue-300 border-blue-700/50",
+        "avatar": "https://yt3.googleusercontent.com/P1NJd_a6v4oYCxCrqPhtxEy3h1BvtKbHejuGjzJBkTwQpGW87hgbY_GMi9sSzg7tLe3JFqqYag=s120-c-k-c0x00ffffff-no-rj",
+        "memberId": "pol-23"
+      }
+    },
     {
       "id": "love-1789852315158",
       "status": "결혼",
@@ -48333,6 +48751,160 @@
       }
     },
     {
+      "id": "love-1792707180205",
+      "status": "연애",
+      "statusType": "dating",
+      "heartEmoji": "💖",
+      "person1": {
+        "name": "이재완",
+        "streamer": "울프",
+        "badge": "💀 농협",
+        "badgeColor": "bg-red-950/80 text-red-300 border-red-700/50",
+        "avatar": "https://yt3.googleusercontent.com/ytc/AIdro_nKgSX8sdXfkhKZ1crVdTpswBXEokISd3qR_bM1YumfleE=s160-c-k-c0x00ffffff-no-rj",
+        "memberId": "gang-nonghyup-4"
+      },
+      "person2": {
+        "name": "미저리",
+        "streamer": "밑줄",
+        "badge": "💀 금속노조",
+        "badgeColor": "bg-red-950/80 text-red-300 border-red-700/50",
+        "avatar": "https://yt3.googleusercontent.com/D0dMOVLAkk-V4OUb0bMRydgfXnSqnKVRH_OeRjB3a7r7pvJ9EefLxgeZzOc3wnSTI6pXi1ik=s160-c-k-c0x00ffffff-no-rj",
+        "memberId": "gang-metalunion-2"
+      }
+    },
+    {
+      "id": "love-1792707139946",
+      "status": "연애",
+      "statusType": "dating",
+      "heartEmoji": "💖",
+      "person1": {
+        "name": "부정미",
+        "streamer": "하루나비",
+        "badge": "🚑 EMS",
+        "badgeColor": "bg-teal-950/80 text-teal-300 border-teal-700/50",
+        "avatar": "https://yt3.googleusercontent.com/9L1ZvBWxyo5U8nD_AEbKlXfuJx_OlUmagQiZGu3_73Hit7KZwN3IwxST3FljJlsv1xaYJIzV2A=s120-c-k-c0x00ffffff-no-rj",
+        "memberId": "ems-3"
+      },
+      "person2": {
+        "name": "단백질소나타",
+        "streamer": "연주하는곰탱",
+        "badge": "👮‍♂️ 경찰",
+        "badgeColor": "bg-blue-950/80 text-blue-300 border-blue-700/50",
+        "avatar": "https://yt3.googleusercontent.com/hiMWvBNi5f-TjgqbkT3G8ngSexVTLZMcbARt2S8lDvoFv0KfRZoWpWDfb6fTbDEsrhq9arBC=s120-c-k-c0x00ffffff-no-rj",
+        "memberId": "pol-33"
+      }
+    },
+    {
+      "id": "love-1792706996525",
+      "status": "연애",
+      "statusType": "dating",
+      "heartEmoji": "💖",
+      "person1": {
+        "name": "난는노숙자",
+        "streamer": "강지형",
+        "badge": "💀 움파룸파",
+        "badgeColor": "bg-red-950/80 text-red-300 border-red-700/50",
+        "avatar": "https://yt3.googleusercontent.com/ytc/AIdro_lbpfOC9I8qLiOVcpkqVGISdiSIIKblr7zkprr7zVhB1cV6PVM=s120-c-k-c0x00ffffff-no-rj",
+        "memberId": "gang-oompa-8"
+      },
+      "person2": {
+        "name": "클랑말랑5세",
+        "streamer": "김오니",
+        "badge": "🏢 KOI 레스토랑",
+        "badgeColor": "bg-amber-950/80 text-amber-300 border-amber-700/50",
+        "avatar": "https://yt3.googleusercontent.com/rT9jDdHJmFIw-QUgZYfJS3DLPp0CF4u_RS9cd72oRqGnNk2_0HVP4RPlATvn5Z3h8i3o00TI=s160-c-k-c0x00ffffff-no-rj",
+        "memberId": "biz-koi-2"
+      }
+    },
+    {
+      "id": "love-1792706879861",
+      "status": "연애",
+      "statusType": "dating",
+      "heartEmoji": "💖",
+      "person1": {
+        "name": "쫑스틴",
+        "streamer": "쫑민",
+        "badge": "💀 움파룸파",
+        "badgeColor": "bg-red-950/80 text-red-300 border-red-700/50",
+        "avatar": "https://yt3.googleusercontent.com/_shRbMzpRA5CxuHg-aEUZP24IejR-2KWOyCe8SucDjEKAK1tL8D1pYZCV4FiJANZwGEsw9R2=s120-c-k-c0x00ffffff-no-rj",
+        "memberId": "gang-oompa-4"
+      },
+      "person2": {
+        "name": "김노션",
+        "streamer": "로션욤",
+        "badge": "🚑 EMS",
+        "badgeColor": "bg-teal-950/80 text-teal-300 border-teal-700/50",
+        "avatar": "https://yt3.googleusercontent.com/qOnI5Sqr5MHqsJ7jZNSjSDc8fdkDYc8HOJGn1PejIYJrsC9uZvgswN1fjoek1HTy5gAE5K4kIlw=s120-c-k-c0x00ffffff-no-rj",
+        "memberId": "gang-oompa-9"
+      }
+    },
+    {
+      "id": "love-1792706855441",
+      "status": "연애",
+      "statusType": "dating",
+      "heartEmoji": "💖",
+      "person1": {
+        "name": "장지환 / 장두광 / 거지환",
+        "streamer": "괴물쥐",
+        "badge": "💀 빅딕",
+        "badgeColor": "bg-red-950/80 text-red-300 border-red-700/50",
+        "avatar": "https://yt3.googleusercontent.com/ytc/AIdro_n2j3w7B8DpULUI9Z-GIFO2HVj487vk_hKU9Epsab-Q6qo=s120-c-k-c0x00ffffff-no-rj",
+        "memberId": "gang-bd-1"
+      },
+      "person2": {
+        "name": "민해리",
+        "streamer": "민네",
+        "badge": "💀 빅딕",
+        "badgeColor": "bg-red-950/80 text-red-300 border-red-700/50",
+        "avatar": "https://yt3.googleusercontent.com/d0cluRmRok5B-zJJyfUmMVGoKyViIQ_RKBtNe0D4UjBB2kVblUJh1j9DbSoZBoECDeAXayCE=s160-c-k-c0x00ffffff-no-rj",
+        "memberId": "gang-bd-7"
+      }
+    },
+    {
+      "id": "love-1792706750755",
+      "status": "연애",
+      "statusType": "dating",
+      "heartEmoji": "💖",
+      "person1": {
+        "name": "레스",
+        "streamer": "레스",
+        "badge": "👮‍♂️ 경찰",
+        "badgeColor": "bg-blue-950/80 text-blue-300 border-blue-700/50",
+        "avatar": "https://yt3.googleusercontent.com/dgb7xWejv0czVQ_3_NS6AZ-8NdlY1d4LP8-gx-Vs5ahLW4pr8Rrqg6r2w7T3K94rzCgLrgYs=s120-c-k-c0x00ffffff-no-rj",
+        "memberId": "pol-5"
+      },
+      "person2": {
+        "name": "나비리",
+        "streamer": "나나양",
+        "badge": "👮‍♂️ 경찰",
+        "badgeColor": "bg-blue-950/80 text-blue-300 border-blue-700/50",
+        "avatar": "https://yt3.googleusercontent.com/e0O5JPO_TyYnSF3R_9GfbIlJtg09Bevwe684xfHQcGIVjy36F8PjY2V7qDi_15oVMEWt-3M4FQ=s120-c-k-c0x00ffffff-no-rj",
+        "memberId": "pol-11"
+      }
+    },
+    {
+      "id": "love-1792605596724",
+      "status": "연애",
+      "statusType": "dating",
+      "heartEmoji": "💖",
+      "person1": {
+        "name": "김윤성",
+        "streamer": "김뿡",
+        "badge": "👮‍♂️ 경찰",
+        "badgeColor": "bg-blue-950/80 text-blue-300 border-blue-700/50",
+        "avatar": "https://yt3.googleusercontent.com/94T3kUaZym2JnMAQcyj7VxnZxSV4lHileaNoGoCOvvhl9QeNI6MEqK3DOllUXscLZm-AezxB=s120-c-k-c0x00ffffff-no-rj",
+        "memberId": "m-mtxvjb7wxx12"
+      },
+      "person2": {
+        "name": "나견차",
+        "streamer": "쿠레나이 나츠키",
+        "badge": "👮‍♂️ 경찰",
+        "badgeColor": "bg-blue-950/80 text-blue-300 border-blue-700/50",
+        "avatar": "https://yt3.googleusercontent.com/MVeDjBIWGRoK1MGRC7Ub-JDKFYeFHSD1miNLVgL6sF4bhmAnIOtTdpWXPrdDzUmjCl6QGS0u=s120-c-k-c0x00ffffff-no-rj",
+        "memberId": "pol-17"
+      }
+    },
+    {
       "id": "love-1792280779751",
       "status": "연애",
       "statusType": "dating",
@@ -48352,6 +48924,50 @@
         "badgeColor": "bg-blue-950/80 text-blue-300 border-blue-700/50",
         "avatar": "https://yt3.googleusercontent.com/rOwC2OiUYJ090jRthBByx3KITeHQtu0zkLwdWl1QptuOp6y6G1w2cbaSaDLB0zQmCVaJVj4Z5A=s120-c-k-c0x00ffffff-no-rj",
         "memberId": "pol-7"
+      }
+    },
+    {
+      "id": "love-1792707061281",
+      "status": "썸",
+      "statusType": "some",
+      "heartEmoji": "💌",
+      "person1": {
+        "name": "동정호",
+        "streamer": "정령왕",
+        "badge": "💀 GIRL BANG",
+        "badgeColor": "bg-red-950/80 text-red-300 border-red-700/50",
+        "avatar": "https://yt3.googleusercontent.com/IjWmZMb6C6xN1G8fkvN4lUl7wk2ElrTm_WTICqBCrw4VnYoQrc8o5vz9IDmOJYlcrw9YEN6CJQ=s160-c-k-c0x00ffffff-no-rj",
+        "memberId": "gang-girlbang-3"
+      },
+      "person2": {
+        "name": "맹숙희",
+        "streamer": "맹숙",
+        "badge": "👮‍♂️ 경찰",
+        "badgeColor": "bg-blue-950/80 text-blue-300 border-blue-700/50",
+        "avatar": "https://yt3.googleusercontent.com/mYaeB0KgIeYcGJ2-7GYRcUi8PaJ8MkwtIBtwWGDOETe4K24_9rYas8P5wWWe4WeAS_0vpHg4VA=s120-c-k-c0x00ffffff-no-rj",
+        "memberId": "pol-22"
+      }
+    },
+    {
+      "id": "love-1792706910246",
+      "status": "썸",
+      "statusType": "some",
+      "heartEmoji": "💌",
+      "person1": {
+        "name": "강 / 강반장 / 강전규 / 김사복",
+        "streamer": "사모장",
+        "badge": "👮‍♂️ 경찰",
+        "badgeColor": "bg-blue-950/80 text-blue-300 border-blue-700/50",
+        "avatar": "https://yt3.googleusercontent.com/ytc/AIdro_kKQL_mji2zdTvWwmVD8zw_KW-oWfvb6ilq74PxZS9trIk=s120-c-k-c0x00ffffff-no-rj",
+        "memberId": "pol-4"
+      },
+      "person2": {
+        "name": "야가다 코푸",
+        "streamer": "이글콥",
+        "badge": "🏢 야스테이션",
+        "badgeColor": "bg-amber-950/80 text-amber-300 border-amber-700/50",
+        "avatar": "https://yt3.googleusercontent.com/Jb8Vzmg-P-RohR0GfSxQHCKlPxzQMcwxb-NjAydlovVPVev3UgSIF2z_246tjwUTcYFZK5iWNiA=s160-c-k-c0x00ffffff-no-rj",
+        "memberId": "biz-yastation-1"
       }
     },
     {
