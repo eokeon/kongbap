@@ -926,10 +926,47 @@ async function startSubscriberSync() {
       ? ` (${formatSubscriberCount(newlyAddedSubTotal)})`
       : "";
 
+    // 3) 마지막 조회일 기준 경과 시간 및 최다 증가 TOP 3
+    const lastSyncDateStr = (typeof syncRes === "object" && syncRes !== null) ? (syncRes.lastSyncDateStr || null) : null;
+    const elapsedSinceLastSync = (typeof syncRes === "object" && syncRes !== null) ? (syncRes.elapsedSinceLastSync || null) : null;
+    const topIncreased = (typeof syncRes === "object" && syncRes !== null && Array.isArray(syncRes.topIncreased))
+      ? syncRes.topIncreased.slice(0, 3)
+      : [];
+    const rankBadges = ["🥇 1위", "🥈 2위", "🥉 3위"];
+    const topIncreasedHtml = topIncreased.length > 0 ? `
+      <div class="pt-2 mt-1 border-t border-zinc-800/80 space-y-1.5">
+        <div class="text-[11px] text-zinc-400 font-semibold flex items-center justify-between gap-2 flex-wrap">
+          <span class="text-amber-300 font-bold">🏆 구독자 최다 증가 TOP ${topIncreased.length}</span>
+          ${lastSyncDateStr ? `<span class="text-[10px] text-zinc-500 font-normal">마지막 조회: ${lastSyncDateStr}</span>` : ''}
+        </div>
+        <div class="space-y-1">
+          ${topIncreased.map((item, idx) => {
+            const diffStr = `+${item.diff.toLocaleString()}명`;
+            const diffUnitStr = (item.diff >= 10000 && item.diffFormatted) ? ` (${item.diffFormatted})` : "";
+            const displayName = item.name && item.name !== item.streamer
+              ? `${item.streamer} <span class="text-zinc-400 font-normal">(${item.name})</span>`
+              : item.streamer;
+            return `
+              <div class="flex items-center justify-between gap-2 px-2 py-1.5 rounded-lg bg-zinc-950/80 border border-zinc-800/70 text-[11px]">
+                <div class="flex items-center gap-1.5 min-w-0 truncate">
+                  <span class="font-bold ${idx === 0 ? 'text-amber-300' : (idx === 1 ? 'text-zinc-200' : 'text-amber-500/90')} flex-shrink-0">${rankBadges[idx] || `${idx + 1}위`}</span>
+                  <span class="text-zinc-100 font-semibold truncate">${displayName}</span>
+                </div>
+                <div class="flex items-center gap-1.5 flex-shrink-0 text-right">
+                  <span class="text-zinc-500 text-[10px] hidden sm:inline">${item.prevRaw} → ${item.newRaw}</span>
+                  <strong class="text-emerald-400 font-bold">${diffStr}${diffUnitStr}</strong>
+                </div>
+              </div>
+            `;
+          }).join("")}
+        </div>
+      </div>
+    ` : "";
+
     if (progressBar) progressBar.style.width = "100%";
     if (progressText) {
       const incColor = existingIncrease > 0 ? 'text-amber-300' : (existingIncrease < 0 ? 'text-blue-400' : 'text-zinc-400');
-      progressText.innerHTML = `<span class="text-emerald-400 font-bold">100% 완료</span> <span class="text-zinc-500 font-normal">(총 <strong class="text-zinc-200 font-bold">${totalCount}</strong>명 중 성공 <strong class="text-emerald-400 font-bold">${successCount}</strong>명 <span class="text-zinc-600">|</span> 기존 구독자 <strong class="${incColor} font-bold">${existingIncText}</strong> (${existingIncreasedCount}명 상승) <span class="text-zinc-600">|</span> 신규 인원 <strong class="text-sky-300 font-bold">${newlyAddedCount}명</strong>)</span>`;
+      progressText.innerHTML = `<span class="text-emerald-400 font-bold">100% 완료</span> <span class="text-zinc-500 font-normal">(총 <strong class="text-zinc-200 font-bold">${totalCount}</strong>명 중 성공 <strong class="text-emerald-400 font-bold">${successCount}</strong>명 <span class="text-zinc-600">|</span> 기존 구독자 <strong class="${incColor} font-bold">${existingIncText}</strong> (${existingIncreasedCount}명 상승) <span class="text-zinc-600">|</span> 신규 인원 <strong class="text-sky-300 font-bold">${newlyAddedCount}명</strong>${elapsedSinceLastSync ? ` <span class="text-zinc-600">|</span> <span class="text-amber-300 font-semibold">${elapsedSinceLastSync}</span>` : ''})</span>`;
     }
 
     if (logBox) {
@@ -957,24 +994,33 @@ async function startSubscriberSync() {
             <strong class="${failedCount > 0 ? 'text-rose-400 font-bold' : 'text-zinc-400'} text-sm">${failedCount}명</strong>
           </div>
         </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-2">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-2 items-start">
           <!-- 1) 기존 멤버 구독자 변동 -->
-          <div class="p-2.5 bg-zinc-900/90 rounded-xl border border-zinc-800/80 flex items-center justify-between gap-2.5 text-xs">
-            <div class="flex flex-col">
-              <span class="text-amber-400 font-bold flex items-center gap-1">
-                <span>📈</span>
-                <span>기존 멤버 구독자 증가</span>
-              </span>
-              <span class="text-zinc-500 text-[11px] font-normal">이전 등록 스트리머</span>
-            </div>
-            <div class="text-right">
-              <div class="font-bold text-sm sm:text-base">
-                <span class="text-zinc-400 text-xs font-normal">구독자 </span><strong class="text-emerald-400 font-extrabold">${existingIncText}</strong>${formattedExistingInc ? `<span class="text-zinc-400 text-xs ml-1">${formattedExistingInc}</span>` : ""}
+          <div class="p-2.5 bg-zinc-900/90 rounded-xl border border-zinc-800/80 flex flex-col justify-between gap-2 text-xs">
+            <div class="flex items-center justify-between gap-2.5">
+              <div class="flex flex-col">
+                <span class="text-amber-400 font-bold flex items-center gap-1">
+                  <span>📈</span>
+                  <span>기존 멤버 구독자 증가</span>
+                </span>
+                <span class="text-zinc-500 text-[11px] font-normal">이전 등록 스트리머</span>
+                ${elapsedSinceLastSync ? `
+                  <span class="text-[11px] text-amber-300 font-semibold mt-1 flex items-center gap-1">
+                    <span>⏱️</span>
+                    <span>${elapsedSinceLastSync}${lastSyncDateStr ? ` <span class="text-zinc-400 font-normal">(${lastSyncDateStr} 기준)</span>` : ''}</span>
+                  </span>
+                ` : ''}
               </div>
-              <div class="text-[11px] text-zinc-400 mt-0.5">
-                ${existingIncreasedCount > 0 ? `구독자 오른 인원: <strong class="text-amber-300 font-bold">${existingIncreasedCount}명</strong>` : `<span class="text-zinc-500">구독자 변동 없음</span>`}
+              <div class="text-right">
+                <div class="font-bold text-sm sm:text-base">
+                  <span class="text-zinc-400 text-xs font-normal">구독자 </span><strong class="text-emerald-400 font-extrabold">${existingIncText}</strong>${formattedExistingInc ? `<span class="text-zinc-400 text-xs ml-1">${formattedExistingInc}</span>` : ""}
+                </div>
+                <div class="text-[11px] text-zinc-400 mt-0.5">
+                  ${existingIncreasedCount > 0 ? `구독자 오른 인원: <strong class="text-amber-300 font-bold">${existingIncreasedCount}명</strong>` : `<span class="text-zinc-500">구독자 변동 없음</span>`}
+                </div>
               </div>
             </div>
+            ${topIncreasedHtml}
           </div>
           <!-- 2) 새로 추가된 인원 -->
           <div class="p-2.5 bg-zinc-900/90 rounded-xl border border-zinc-800/80 flex items-center justify-between gap-2.5 text-xs">
@@ -996,6 +1042,12 @@ async function startSubscriberSync() {
           </div>
         </div>
         <div class="text-zinc-300 text-xs leading-relaxed space-y-1.5 mt-2.5 p-3 bg-zinc-900/60 rounded-xl border border-zinc-800/60 font-sans">
+          ${elapsedSinceLastSync ? `
+            <div class="flex items-center gap-2">
+              <span class="text-zinc-500">•</span>
+              <span><strong>갱신 주기:</strong> 마지막 조회일(${lastSyncDateStr || '이전 기록'}) 기준 <strong class="text-amber-300">${elapsedSinceLastSync}</strong>했습니다.</span>
+            </div>
+          ` : ''}
           <div class="flex items-center gap-2">
             <span class="text-zinc-500">•</span>
             <span>전체 <strong>${totalCount}명</strong> 중 <strong class="text-emerald-400">${successCount}명</strong> 조회 성공${failedCount > 0 ? `, <strong class="text-rose-400">${failedCount}명</strong> 실패` : ''}</span>
@@ -1004,6 +1056,12 @@ async function startSubscriberSync() {
             <span class="text-zinc-500">•</span>
             <span><strong>기존 멤버 구독자:</strong> ${existingIncreasedCount > 0 ? `총 <strong class="text-amber-300">${existingIncreasedCount}명</strong>의 스트리머 구독자가 상승하여, 기존 인원 총 구독자 수가 <strong class="text-emerald-400">${existingIncText}</strong>${formattedExistingInc ? ` (${formattedExistingInc.trim()})` : ''} 증가했습니다.` : `구독자 수 변동이 없습니다.`}</span>
           </div>
+          ${topIncreased.length > 0 ? `
+            <div class="flex items-start gap-2">
+              <span class="text-zinc-500">•</span>
+              <span><strong>최다 증가 TOP ${topIncreased.length}:</strong> ${topIncreased.map((it, i) => `<strong class="text-amber-300">${i + 1}위</strong> ${it.streamer}${it.name && it.name !== it.streamer ? `(${it.name})` : ''} <strong class="text-emerald-400">+${it.diff.toLocaleString()}명</strong>`).join(' · ')}</span>
+            </div>
+          ` : ''}
           <div class="flex items-center gap-2">
             <span class="text-zinc-500">•</span>
             <span><strong>새로 추가된 인원:</strong> 신규 스트리머 <strong class="text-sky-300">${newlyAddedCount}명</strong> (보유 구독자 합계: <strong class="text-sky-300">${newlyAddedSubText}</strong>${formattedNewlyAdded ? ` (${formattedNewlyAdded.trim()})` : ''})이 새롭게 반영되었습니다.</span>

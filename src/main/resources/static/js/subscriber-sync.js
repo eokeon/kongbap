@@ -360,12 +360,105 @@ async function fetchMemberSubscriberFromYouTube(member) {
   return null;
 }
 
+// 이전 구독자 일괄 갱신 시각 조회 (백엔드 백업 파일명 및 로컬 스토리지 기준)
+async function getPreviousSubscriberSyncDate() {
+  let prevDate = null;
+
+  const parseFileTimestamp = (fileName) => {
+    if (!fileName || !fileName.includes("구독자")) return null;
+    const m = fileName.match(/(\d{4})(\d{2})(\d{2})_(\d{2})(\d{2})(\d{2})/);
+    if (!m) return null;
+    const d = new Date(
+      Number(m[1]),
+      Number(m[2]) - 1,
+      Number(m[3]),
+      Number(m[4]),
+      Number(m[5]),
+      Number(m[6])
+    );
+    return isNaN(d.getTime()) ? null : d;
+  };
+
+  try {
+    let files = (typeof serverBackupInfo !== "undefined" && Array.isArray(serverBackupInfo?.files))
+      ? serverBackupInfo.files
+      : null;
+
+    if (!files || files.length === 0) {
+      const baseUrl = typeof API_BASE !== "undefined" ? API_BASE : "";
+      const authHeaders = typeof getAuthHeaders === "function" ? getAuthHeaders() : {};
+      const res = await fetch(`${baseUrl}/api/status`, {
+        cache: "no-store",
+        credentials: "include",
+        headers: authHeaders
+      });
+      if (res.ok) {
+        const data = await res.json();
+        if (Array.isArray(data?.files)) {
+          files = data.files;
+        }
+      }
+    }
+
+    if (Array.isArray(files)) {
+      for (const f of files) {
+        const parsed = parseFileTimestamp(f);
+        if (parsed && (!prevDate || parsed > prevDate)) {
+          prevDate = parsed;
+          break; // files 목록은 최신순 정렬되어 있음
+        }
+      }
+    }
+  } catch (e) {}
+
+  try {
+    const savedIso = localStorage.getItem("kongbap_last_sub_sync_at");
+    if (savedIso) {
+      const savedDate = new Date(savedIso);
+      if (!isNaN(savedDate.getTime()) && (!prevDate || savedDate > prevDate)) {
+        prevDate = savedDate;
+      }
+    }
+  } catch (e) {}
+
+  return prevDate;
+}
+
+function formatSubscriberSyncDateDisplay(d) {
+  if (!d || isNaN(d.getTime())) return null;
+  const pad = n => String(n).padStart(2, "0");
+  return `${d.getFullYear()}.${pad(d.getMonth() + 1)}.${pad(d.getDate())} ${pad(d.getHours())}:${pad(d.getMinutes())}`;
+}
+
+function formatElapsedSinceLastSync(prevDate, nowDate = new Date()) {
+  if (!prevDate || isNaN(prevDate.getTime())) return null;
+  const diffMs = Math.max(0, nowDate.getTime() - prevDate.getTime());
+  const totalMinutes = Math.floor(diffMs / (1000 * 60));
+  const days = Math.floor(totalMinutes / (60 * 24));
+  const hours = Math.floor((totalMinutes % (60 * 24)) / 60);
+  const minutes = totalMinutes % 60;
+
+  if (days > 0) {
+    return hours > 0 ? `${days}일 ${hours}시간 만에 갱신` : `${days}일 만에 갱신`;
+  }
+  if (hours > 0) {
+    return minutes > 0 ? `${hours}시간 ${minutes}분 만에 갱신` : `${hours}시간 만에 갱신`;
+  }
+  if (minutes > 0) {
+    return `${minutes}분 만에 갱신`;
+  }
+  return "방금 전 (1분 미만) 갱신";
+}
+
 // 관리자가 모달에서 수동으로 실행하는 유튜브/치지직 구독자·팔로워 수 초고속 병렬 일괄 갱신
 async function executeSubscriberSync(onProgress) {
   if (typeof requireServerConnection === "function") {
     const isConnected = await requireServerConnection("구독자 일괄 갱신");
     if (!isConnected) return { success: false, updatedCount: 0, totalIncrease: 0, targetsCount: 0 };
   }
+
+  // 새 백업 스냅샷 생성 전에 마지막 구독자 조회 시각 먼저 확보
+  const prevSyncDate = await getPreviousSubscriberSyncDate();
 
   if (typeof initYouTubeApiKeyFromBackend === "function") {
     await initYouTubeApiKeyFromBackend();
@@ -378,11 +471,13 @@ async function executeSubscriberSync(onProgress) {
 
   // 원래 구독자/팔로워 정보가 등록되어 있던 인원 기록 (원래 정보가 있었던 대상만 기존 대비 증가량 계산)
   const originalSubMap = new Map();
+  const originalRawSubMap = new Map();
   targets.forEach(m => {
     const raw = m.subscriberCount;
     const num = parseSubscriberCount(raw);
     if (num > 0) {
       originalSubMap.set(String(m.id), num);
+      originalRawSubMap.set(String(m.id), String(raw).trim());
     }
   });
 
@@ -670,7 +765,7 @@ async function executeSubscriberSync(onProgress) {
     onProgress(targetItems.length, targetItems.length, "전체 인원 조회 완료", "SAVING_BACKUP");
   }
 
-  // 3단계: 기존 대비 총 증가량 및 새로 추가된 인원 증가량 계산
+  // 3단계: 기존 대비 총 증가량, 최다 증가 TOP 3 및 새로 추가된 인원 증가량 계산
   let totalSubIncrease = 0;
   let prevTotalSub = 0;
   let newTotalSub = 0;
@@ -678,6 +773,9 @@ async function executeSubscriberSync(onProgress) {
 
   let newlyAddedCount = 0;
   let newlyAddedSubTotal = 0;
+
+  const increasedMembers = [];
+  const seenStreamerKeys = new Set();
 
   targets.forEach(m => {
     const memId = String(m.id);
@@ -692,6 +790,28 @@ async function executeSubscriberSync(onProgress) {
         if (diff > 0) {
           totalSubIncrease += diff;
           increasedCount++;
+
+          const dedupKey = (m.youtubeUrl && m.youtubeUrl.trim().toLowerCase().replace(/\/+$/, "")) ||
+                           (m.streamer && m.streamer.trim().toLowerCase()) ||
+                           memId;
+          if (!seenStreamerKeys.has(dedupKey)) {
+            seenStreamerKeys.add(dedupKey);
+            const isChzzk = typeof isMemberChzzk === "function"
+              ? isMemberChzzk(m)
+              : (m.youtubeUrl && (/chzzk\.naver\.com/i.test(String(m.youtubeUrl)) || /^[a-f0-9]{32}$/i.test(String(m.youtubeUrl).trim())));
+            increasedMembers.push({
+              id: memId,
+              name: m.name || "",
+              streamer: m.streamer || m.name || "",
+              prevCount,
+              prevRaw: originalRawSubMap.get(memId) || formatSubscriberCount(prevCount),
+              newCount,
+              newRaw: m.subscriberCount || formatSubscriberCount(newCount),
+              diff,
+              diffFormatted: formatSubscriberCount(diff),
+              platform: isChzzk ? "chzzk" : "youtube"
+            });
+          }
         }
       } else {
         // 새로 추가된 인원 (기존에 등록되어 있지 않았던 인원)
@@ -700,6 +820,16 @@ async function executeSubscriberSync(onProgress) {
       }
     }
   });
+
+  increasedMembers.sort((a, b) => b.diff - a.diff || b.newCount - a.newCount);
+  const topIncreased = increasedMembers.slice(0, 3);
+
+  const nowDate = new Date();
+  const lastSyncDateStr = formatSubscriberSyncDateDisplay(prevSyncDate);
+  const elapsedSinceLastSync = formatElapsedSinceLastSync(prevSyncDate, nowDate);
+  try {
+    localStorage.setItem("kongbap_last_sub_sync_at", nowDate.toISOString());
+  } catch (e) {}
 
   const grandTotalIncrease = totalSubIncrease + newlyAddedSubTotal;
 
@@ -748,6 +878,9 @@ async function executeSubscriberSync(onProgress) {
     newTotal: newTotalSub,
     increasedCount,
     hasPrevCount: originalSubMap.size,
+    topIncreased,
+    lastSyncDateStr,
+    elapsedSinceLastSync,
     valueOf() { return this.updatedCount; },
     toString() { return String(this.updatedCount); }
   };
